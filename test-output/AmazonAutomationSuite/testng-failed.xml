@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [AmazonAutomationSuite]">
+  <listeners>
+    <listener class-name="com.amazonAutomationFramework.customlisterns.ExtentListeners"/>
+  </listeners>
+  <test name="loginTestValidUser">
+    <classes>
+      <class name="com.amazonAutomationFramework.TestPackage.amazonLoginValidUser"/>
+    </classes>
+  </test> <!-- loginTestValidUser -->
+  <test name="loginTestInnalidUser">
+    <classes>
+      <class name="com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser"/>
+    </classes>
+  </test> <!-- loginTestInnalidUser -->
+  <test name="couponsCategoryTest">
+    <classes>
+      <class name="com.amazonAutomationFramework.TestPackage.couponsCategory"/>
+    </classes>
+  </test> <!-- couponsCategoryTest -->
+  <test name="CouponsSortTest">
+    <classes>
+      <class name="com.amazonAutomationFramework.TestPackage.couponSort"/>
+    </classes>
+  </test> <!-- CouponsSortTest -->
+  <test name="SearchByCategoryTest">
+    <classes>
+      <class name="com.amazonAutomationFramework.TestPackage.searchByCategory"/>
+    </classes>
+  </test> <!-- SearchByCategoryTest -->
+  <test name="addToCartTest">
+    <classes>
+      <class name="com.amazonAutomationFramework.TestPackage.addProductToCart"/>
+    </classes>
+  </test> <!-- addToCartTest -->
+  <test name="loginTestValidUser(failed)">
+    <classes>
+      <class name="com.amazonAutomationFramework.TestPackage.searchByCategory">
+        <methods>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.searchByCategory -->
+      <class name="com.amazonAutomationFramework.TestPackage.couponSort">
+        <methods>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.couponSort -->
+      <class name="com.amazonAutomationFramework.TestPackage.amazonLoginValidUser">
+        <methods>
+          <include name="validUserLoginLogoutTest"/>
+          <include name="beforeMethodSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.amazonLoginValidUser -->
+      <class name="com.amazonAutomationFramework.TestPackage.couponsCategory">
+        <methods>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.couponsCategory -->
+      <class name="com.amazonAutomationFramework.TestPackage.addProductToCart">
+        <methods>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.addProductToCart -->
+      <class name="com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser">
+        <methods>
+          <include name="beforeMethodSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser -->
+    </classes>
+  </test> <!-- loginTestValidUser(failed) -->
+  <test name="loginTestInnalidUser(failed)">
+    <classes>
+      <class name="com.amazonAutomationFramework.TestPackage.searchByCategory">
+        <methods>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.searchByCategory -->
+      <class name="com.amazonAutomationFramework.TestPackage.couponSort">
+        <methods>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.couponSort -->
+      <class name="com.amazonAutomationFramework.TestPackage.amazonLoginValidUser">
+        <methods>
+          <include name="beforeMethodSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.amazonLoginValidUser -->
+      <class name="com.amazonAutomationFramework.TestPackage.couponsCategory">
+        <methods>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.couponsCategory -->
+      <class name="com.amazonAutomationFramework.TestPackage.addProductToCart">
+        <methods>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.addProductToCart -->
+      <class name="com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser">
+        <methods>
+          <include name="invalidUserLoginTest"/>
+          <include name="beforeMethodSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser -->
+    </classes>
+  </test> <!-- loginTestInnalidUser(failed) -->
+  <test name="couponsCategoryTest(failed)">
+    <classes>
+      <class name="com.amazonAutomationFramework.TestPackage.searchByCategory">
+        <methods>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.searchByCategory -->
+      <class name="com.amazonAutomationFramework.TestPackage.couponSort">
+        <methods>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.couponSort -->
+      <class name="com.amazonAutomationFramework.TestPackage.amazonLoginValidUser">
+        <methods>
+          <include name="beforeMethodSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.amazonLoginValidUser -->
+      <class name="com.amazonAutomationFramework.TestPackage.couponsCategory">
+        <methods>
+          <include name="testSetup"/>
+          <include name="couponCategoryTest"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.couponsCategory -->
+      <class name="com.amazonAutomationFramework.TestPackage.addProductToCart">
+        <methods>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.addProductToCart -->
+      <class name="com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser">
+        <methods>
+          <include name="beforeMethodSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser -->
+    </classes>
+  </test> <!-- couponsCategoryTest(failed) -->
+  <test name="CouponsSortTest(failed)">
+    <classes>
+      <class name="com.amazonAutomationFramework.TestPackage.searchByCategory">
+        <methods>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.searchByCategory -->
+      <class name="com.amazonAutomationFramework.TestPackage.couponSort">
+        <methods>
+          <include name="testSetup"/>
+          <include name="couponSortTest"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.couponSort -->
+      <class name="com.amazonAutomationFramework.TestPackage.amazonLoginValidUser">
+        <methods>
+          <include name="beforeMethodSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.amazonLoginValidUser -->
+      <class name="com.amazonAutomationFramework.TestPackage.couponsCategory">
+        <methods>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.couponsCategory -->
+      <class name="com.amazonAutomationFramework.TestPackage.addProductToCart">
+        <methods>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.addProductToCart -->
+      <class name="com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser">
+        <methods>
+          <include name="beforeMethodSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser -->
+    </classes>
+  </test> <!-- CouponsSortTest(failed) -->
+  <test name="SearchByCategoryTest(failed)">
+    <classes>
+      <class name="com.amazonAutomationFramework.TestPackage.searchByCategory">
+        <methods>
+          <include name="categorySelectTest"/>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.searchByCategory -->
+      <class name="com.amazonAutomationFramework.TestPackage.couponSort">
+        <methods>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.couponSort -->
+      <class name="com.amazonAutomationFramework.TestPackage.amazonLoginValidUser">
+        <methods>
+          <include name="beforeMethodSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.amazonLoginValidUser -->
+      <class name="com.amazonAutomationFramework.TestPackage.couponsCategory">
+        <methods>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.couponsCategory -->
+      <class name="com.amazonAutomationFramework.TestPackage.addProductToCart">
+        <methods>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.addProductToCart -->
+      <class name="com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser">
+        <methods>
+          <include name="beforeMethodSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser -->
+    </classes>
+  </test> <!-- SearchByCategoryTest(failed) -->
+  <test name="addToCartTest(failed)">
+    <classes>
+      <class name="com.amazonAutomationFramework.TestPackage.searchByCategory">
+        <methods>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.searchByCategory -->
+      <class name="com.amazonAutomationFramework.TestPackage.couponSort">
+        <methods>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.couponSort -->
+      <class name="com.amazonAutomationFramework.TestPackage.amazonLoginValidUser">
+        <methods>
+          <include name="beforeMethodSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.amazonLoginValidUser -->
+      <class name="com.amazonAutomationFramework.TestPackage.couponsCategory">
+        <methods>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.couponsCategory -->
+      <class name="com.amazonAutomationFramework.TestPackage.addProductToCart">
+        <methods>
+          <include name="productAddtoCartTest"/>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.addProductToCart -->
+      <class name="com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser">
+        <methods>
+          <include name="beforeMethodSetup"/>
+        </methods>
+      </class> <!-- com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser -->
+    </classes>
+  </test> <!-- addToCartTest(failed) -->
+</suite> <!-- Failed suite [AmazonAutomationSuite] -->

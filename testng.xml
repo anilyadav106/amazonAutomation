@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AmazonAutomationSuite" parallel="false"  preserve-order="true">
+
+	<listeners>
+		<listener
+			class-name="com.amazonAutomationFramework.customlisterns.ExtentListeners">
+		</listener>
+	</listeners>
+	
+	<test name="loginTestValidUser"  >
+		<classes>
+			<class name="com.amazonAutomationFramework.TestPackage.amazonLoginValidUser" />
+		</classes>
+	</test> <!-- Test -->
+	
+		<test name="loginTestInnalidUser"  >
+		<classes>
+			<class name="com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser" />
+		</classes>
+	</test> <!-- Test -->
+	
+
+	<test name="couponsCategoryTest"  >
+		<classes>
+
+			<class name="com.amazonAutomationFramework.TestPackage.couponsCategory" />
+
+
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="CouponsSortTest"  >
+		<classes>
+
+			<class name="com.amazonAutomationFramework.TestPackage.couponSort" />
+
+
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="SearchByCategoryTest"  >
+		<classes>
+
+
+			<class name="com.amazonAutomationFramework.TestPackage.searchByCategory" />
+
+
+		</classes>
+	</test> <!-- Test -->
+	
+	
+	<test name="addToCartTest"  >
+		<classes>
+
+
+			<class name="com.amazonAutomationFramework.TestPackage.addProductToCart" />
+
+		</classes>
+	</test> <!-- Test -->
+ 
+
+
+
+</suite> <!-- Suite -->

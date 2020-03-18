@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-AmazonAutomationSuite">
+              <span class="suite-name border-skipped">AmazonAutomationSuite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-AmazonAutomationSuite">
+                    <span>C:\Users\anilkumar06\workspace\AmazonAutomation\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-AmazonAutomationSuite">
+                    <span class="test-stats">6 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-AmazonAutomationSuite">
+                    <span>2 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-AmazonAutomationSuite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-AmazonAutomationSuite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-AmazonAutomationSuite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-AmazonAutomationSuite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">7 methods,  7 skipped,  </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-AmazonAutomationSuite" class="hide-methods skipped suite-AmazonAutomationSuite"> (hide)</a> <!-- hide-methods skipped suite-AmazonAutomationSuite -->
+                      <a href="#" panel-name="suite-AmazonAutomationSuite" class="show-methods skipped suite-AmazonAutomationSuite"> (show)</a> <!-- show-methods skipped suite-AmazonAutomationSuite -->
+                    </span>
+                    <div class="method-list-content skipped suite-AmazonAutomationSuite">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AmazonAutomationSuite" title="com.amazonAutomationFramework.TestPackage.searchByCategory" hash-for-method="categorySelectTest({Runmode=Y, categoryName=Watches})">categorySelectTest({Runmode=Y, categoryName=Watches})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AmazonAutomationSuite" title="com.amazonAutomationFramework.TestPackage.couponsCategory" hash-for-method="couponCategoryTest({categoryText=Watches, Runmode=Y})">couponCategoryTest({categoryText=Watches, Runmode=Y})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AmazonAutomationSuite" title="com.amazonAutomationFramework.TestPackage.couponSort" hash-for-method="couponSortTest({sortText=Oldest, Runmode=Y})">couponSortTest({sortText=Oldest, Runmode=Y})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AmazonAutomationSuite" title="com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser" hash-for-method="invalidUserLoginTest({UID=anilyadav106@gmail.com, PWD=invalidpassword, Runmode=Y})">invalidUserLoginTest({UID=anilyadav106@gmail.com, PWD=invalidpassword, Runmode=Y})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AmazonAutomationSuite" title="com.amazonAutomationFramework.TestPackage.addProductToCart" hash-for-method="productAddtoCartTest({Runmode=Y, productName=boAt BassHeads 100 in-Ear Headphones with Mic (White)})">productAddtoCartTest({Runmode=Y, productName=boAt BassHeads 100 in-Ear Headphones with Mic (White)})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AmazonAutomationSuite" title="com.amazonAutomationFramework.TestPackage.addProductToCart" hash-for-method="productAddtoCartTest({Runmode=Y, productName=boAt BassHeads 100 in-Ear Headphones with Mic (Black)})">productAddtoCartTest({Runmode=Y, productName=boAt BassHeads 100 in-Ear Headphones with Mic (Black)})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AmazonAutomationSuite" title="com.amazonAutomationFramework.TestPackage.amazonLoginValidUser" hash-for-method="validUserLoginLogoutTest({UID=anilyadav106@gmail.com, PWD=Ndae10606, Runmode=Y})">validUserLoginLogoutTest({UID=anilyadav106@gmail.com, PWD=Ndae10606, Runmode=Y})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-AmazonAutomationSuite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-AmazonAutomationSuite" class="panel AmazonAutomationSuite">
+          <div class="suite-AmazonAutomationSuite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.amazonAutomationFramework.TestPackage.searchByCategory</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="categorySelectTest({Runmode=Y, categoryName=Watches})">
+                  </a> <!-- categorySelectTest({Runmode=Y, categoryName=Watches}) -->
+                  <span class="method-name">categorySelectTest</span>
+                  <span class="parameters">({Runmode=Y, categoryName=Watches})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AmazonAutomationSuite-class-skipped -->
+          <div class="suite-AmazonAutomationSuite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.amazonAutomationFramework.TestPackage.couponSort</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="couponSortTest({sortText=Oldest, Runmode=Y})">
+                  </a> <!-- couponSortTest({sortText=Oldest, Runmode=Y}) -->
+                  <span class="method-name">couponSortTest</span>
+                  <span class="parameters">({sortText=Oldest, Runmode=Y})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AmazonAutomationSuite-class-skipped -->
+          <div class="suite-AmazonAutomationSuite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.amazonAutomationFramework.TestPackage.amazonLoginValidUser</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validUserLoginLogoutTest({UID=anilyadav106@gmail.com, PWD=Ndae10606, Runmode=Y})">
+                  </a> <!-- validUserLoginLogoutTest({UID=anilyadav106@gmail.com, PWD=Ndae10606, Runmode=Y}) -->
+                  <span class="method-name">validUserLoginLogoutTest</span>
+                  <span class="parameters">({UID=anilyadav106@gmail.com, PWD=Ndae10606, Runmode=Y})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AmazonAutomationSuite-class-skipped -->
+          <div class="suite-AmazonAutomationSuite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.amazonAutomationFramework.TestPackage.couponsCategory</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="couponCategoryTest({categoryText=Watches, Runmode=Y})">
+                  </a> <!-- couponCategoryTest({categoryText=Watches, Runmode=Y}) -->
+                  <span class="method-name">couponCategoryTest</span>
+                  <span class="parameters">({categoryText=Watches, Runmode=Y})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AmazonAutomationSuite-class-skipped -->
+          <div class="suite-AmazonAutomationSuite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.amazonAutomationFramework.TestPackage.addProductToCart</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="productAddtoCartTest({Runmode=Y, productName=boAt BassHeads 100 in-Ear Headphones with Mic (White)})">
+                  </a> <!-- productAddtoCartTest({Runmode=Y, productName=boAt BassHeads 100 in-Ear Headphones with Mic (White)}) -->
+                  <span class="method-name">productAddtoCartTest</span>
+                  <span class="parameters">({Runmode=Y, productName=boAt BassHeads 100 in-Ear Headphones with Mic (White)})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="productAddtoCartTest({Runmode=Y, productName=boAt BassHeads 100 in-Ear Headphones with Mic (Black)})">
+                  </a> <!-- productAddtoCartTest({Runmode=Y, productName=boAt BassHeads 100 in-Ear Headphones with Mic (Black)}) -->
+                  <span class="method-name">productAddtoCartTest</span>
+                  <span class="parameters">({Runmode=Y, productName=boAt BassHeads 100 in-Ear Headphones with Mic (Black)})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AmazonAutomationSuite-class-skipped -->
+          <div class="suite-AmazonAutomationSuite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="invalidUserLoginTest({UID=anilyadav106@gmail.com, PWD=invalidpassword, Runmode=Y})">
+                  </a> <!-- invalidUserLoginTest({UID=anilyadav106@gmail.com, PWD=invalidpassword, Runmode=Y}) -->
+                  <span class="method-name">invalidUserLoginTest</span>
+                  <span class="parameters">({UID=anilyadav106@gmail.com, PWD=invalidpassword, Runmode=Y})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AmazonAutomationSuite-class-skipped -->
+        </div> <!-- panel AmazonAutomationSuite -->
+        <div panel-name="test-xml-AmazonAutomationSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\anilkumar06\workspace\AmazonAutomation\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;AmazonAutomationSuite&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.amazonAutomationFramework.customlisterns.ExtentListeners&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test name=&quot;loginTestValidUser&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.amazonAutomationFramework.TestPackage.amazonLoginValidUser&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- loginTestValidUser --&gt;
+  &lt;test name=&quot;loginTestInnalidUser&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- loginTestInnalidUser --&gt;
+  &lt;test name=&quot;couponsCategoryTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.amazonAutomationFramework.TestPackage.couponsCategory&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- couponsCategoryTest --&gt;
+  &lt;test name=&quot;CouponsSortTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.amazonAutomationFramework.TestPackage.couponSort&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- CouponsSortTest --&gt;
+  &lt;test name=&quot;SearchByCategoryTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.amazonAutomationFramework.TestPackage.searchByCategory&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- SearchByCategoryTest --&gt;
+  &lt;test name=&quot;addToCartTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.amazonAutomationFramework.TestPackage.addProductToCart&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- addToCartTest --&gt;
+&lt;/suite&gt; &lt;!-- AmazonAutomationSuite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-AmazonAutomationSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for AmazonAutomationSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">loginTestValidUser (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">loginTestInnalidUser (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">couponsCategoryTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">CouponsSortTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">SearchByCategoryTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">addToCartTest (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-AmazonAutomationSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for AmazonAutomationSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">sanity</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">categorySelectTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">productAddtoCartTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">smoke</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">invalidUserLoginTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">validUserLoginLogoutTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-AmazonAutomationSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for AmazonAutomationSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_AmazonAutomationSuite');
+function tableData_AmazonAutomationSuite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(7);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'invalidUserLoginTest')
+data.setCell(0, 2, 'com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser')
+data.setCell(0, 3, 14);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'validUserLoginLogoutTest')
+data.setCell(1, 2, 'com.amazonAutomationFramework.TestPackage.amazonLoginValidUser')
+data.setCell(1, 3, 4);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'productAddtoCartTest')
+data.setCell(2, 2, 'com.amazonAutomationFramework.TestPackage.addProductToCart')
+data.setCell(2, 3, 3);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'categorySelectTest')
+data.setCell(3, 2, 'com.amazonAutomationFramework.TestPackage.searchByCategory')
+data.setCell(3, 3, 2);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'couponCategoryTest')
+data.setCell(4, 2, 'com.amazonAutomationFramework.TestPackage.couponsCategory')
+data.setCell(4, 3, 1);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'couponSortTest')
+data.setCell(5, 2, 'com.amazonAutomationFramework.TestPackage.couponSort')
+data.setCell(5, 3, 1);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'productAddtoCartTest')
+data.setCell(6, 2, 'com.amazonAutomationFramework.TestPackage.addProductToCart')
+data.setCell(6, 3, 1);
+window.suiteTableData['AmazonAutomationSuite']= { tableData: data, tableDiv: 'times-div-AmazonAutomationSuite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 26 ms</span>
+              <div id="times-div-AmazonAutomationSuite">
+              </div> <!-- times-div-AmazonAutomationSuite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-AmazonAutomationSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for AmazonAutomationSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-AmazonAutomationSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-AmazonAutomationSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.amazonAutomationFramework.TestPackage.amazonLoginValidUser</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">beforeMethodSetup</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">validUserLoginLogoutTest({UID=anilyadav106@gmail.com, PWD=Ndae10606, Runmode=Y})</span>
+                <span class="method-start">29 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">beforeMethodSetup</span>
+                <span class="method-start">500 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">invalidUserLoginTest({UID=anilyadav106@gmail.com, PWD=invalidpassword, Runmode=Y})</span>
+                <span class="method-start">506 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.amazonAutomationFramework.TestPackage.couponsCategory</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testSetup</span>
+                <span class="method-start">618 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">couponCategoryTest({categoryText=Watches, Runmode=Y})</span>
+                <span class="method-start">622 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.amazonAutomationFramework.TestPackage.couponSort</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testSetup</span>
+                <span class="method-start">684 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">couponSortTest({sortText=Oldest, Runmode=Y})</span>
+                <span class="method-start">687 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.amazonAutomationFramework.TestPackage.searchByCategory</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testSetup</span>
+                <span class="method-start">754 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">categorySelectTest({Runmode=Y, categoryName=Watches})</span>
+                <span class="method-start">757 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.amazonAutomationFramework.TestPackage.addProductToCart</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testSetup</span>
+                <span class="method-start">817 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">productAddtoCartTest({Runmode=Y, productName=boAt BassHeads 100 in-Ear Headphones with Mic (Black)})</span>
+                <span class="method-start">819 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">productAddtoCartTest({Runmode=Y, productName=boAt BassHeads 100 in-Ear Headphones with Mic (White)})</span>
+                <span class="method-start">826 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

@@ -22,7 +22,9 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 public class ExtentListeners implements ITestListener, ISuiteListener {
 
 	static Date d = new Date();
-	static String fileName = "Extent_" + d.toString().replace(":", "_").replace(" ", "_") + ".html";
+	// static String fileName = "Extent_" + d.toString().replace(":",
+	// "_").replace(" ", "_") + ".html";
+	static String fileName = "Extent_Report_noTimeStamp" + ".html";
 
 	public static ExtentReports extent = ExtentManager
 			.createInstance(System.getProperty("user.dir") + "\\reports\\" + fileName);

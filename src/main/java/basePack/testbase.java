@@ -10,6 +10,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -34,6 +36,20 @@ public class testbase {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
+	}
+
+	@BeforeSuite
+
+	public static void beforeSuite() {
+
+		System.out.println("Before suite");
+	}
+
+	@AfterSuite
+
+	public static void afterSuite() {
+
+		System.out.println("After suite");
 	}
 
 	public static void captureScreeshot() {

@@ -50,6 +50,7 @@ public class addProductToCart extends testbase {
 			throw new SkipException("Skipping the test as runMode equals N");
 
 		} else {
+
 			ExtentListeners.test.log(Status.INFO, "Add to product test started for :" + data.get("productName"));
 
 			home.addtoCartAProduct(data.get("productName"));

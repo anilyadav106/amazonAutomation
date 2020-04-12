@@ -7,6 +7,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.TakesScreenshot;
@@ -29,6 +30,7 @@ public class testbase {
 	public static FileInputStream fis;
 	public static WebDriver driver;
 	public static ExcelReader excel = new ExcelReader(".\\src\\test\\resources\\Excel\\TestData.xlsx");
+	public static Logger log = Logger.getLogger("devpinoyLogger");
 
 	/*
 	 * method to launch the browser basis the value provided from config file it
@@ -38,22 +40,23 @@ public class testbase {
 		fis = new FileInputStream(".\\src\\test\\resources\\properties\\config.properties");
 		config.load(fis);
 
+		log.debug("Launching the desired browser");
 		if (config.getProperty("browser").contains("CHROME")) {
-
+			log.debug("Launching chrome browser");
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.setPageLoadStrategy(PageLoadStrategy.NONE);
 			driver = new ChromeDriver(options);
 
 		} else if (config.getProperty("browser").contains("FF")) {
-
+			log.debug("Launching FF browser");
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 
 		}
 
 		else if (config.getProperty("browser").contains("IE")) {
-
+			log.debug("Launching IE browser");
 			WebDriverManager.iedriver().setup();
 			InternetExplorerOptions options = new InternetExplorerOptions();
 
@@ -70,13 +73,13 @@ public class testbase {
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	}
 
-	/* method to launch the browser before starting testNG suite xml */
+	/* method to launch capture screenshot */
 
 	public static void captureScreeshot() {
-
-		File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		log.debug("Launching the capture screen shot");
 
 		try {
+			File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(source, constants.destination);
 		} catch (IOException e) {
 

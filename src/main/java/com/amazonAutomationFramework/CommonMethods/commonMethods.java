@@ -36,10 +36,9 @@ public class commonMethods extends testbase {
 	 * drodown element and text of the element in the dropdow
 	 */
 	public static void selectElementFromDropDownSelect(WebElement elem, String elementText) {
-
+		elem.click();
+		Select sel = new Select(elem);
 		try {
-			elem.click();
-			Select sel = new Select(elem);
 
 			sel.selectByVisibleText(elementText);
 
@@ -51,9 +50,9 @@ public class commonMethods extends testbase {
 	}
 
 	public static void searchInputBox(WebElement elem, String searchText) {
-
+		wait.until(ExpectedConditions.elementToBeClickable(elem)).click();
 		try {
-			wait.until(ExpectedConditions.elementToBeClickable(elem)).click();
+
 			elem.sendKeys(searchText);
 			elem.submit();
 

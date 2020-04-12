@@ -20,7 +20,7 @@ public class addProductToCart extends testbase {
 
 	public homePage home;
 
-	/* method to initialize page objects in test class */
+	/*This is method to initialize page objects in test class */
 
 	@BeforeMethod
 	public void testSetup() {

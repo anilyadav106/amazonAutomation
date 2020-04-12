@@ -1,7 +1,5 @@
 package com.amazonAutomationFramework.customlisterns;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.util.Arrays;
 import java.util.Date;
 
@@ -27,17 +25,20 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 	static String fileName = "Extent_Report_noTimeStamp" + ".html";
 
 	public static ExtentReports extent = ExtentManager
-			.createInstance(System.getProperty("user.dir") + "\\reports\\" + fileName);
+			.createReport(System.getProperty("user.dir") + "\\reports\\" + fileName);
 
 	public static ThreadLocal<ExtentTest> testReport = new ThreadLocal<ExtentTest>();
-	static String messageBody;
 	public static ExtentTest test;
 
 	public void onTestStart(ITestResult result) {
 		System.out.println(" Test started for : " + result.getMethod().getMethodName());
 
-		test = extent.createTest("TestCase : " + result.getMethod().getMethodName());
-		testReport.set(test);
+		test = extent.createTest("TestCase : " + result.getMethod().getMethodName()); // to
+																						// create
+																						// a
+																						// test
+		testReport.set(test); // to add above test to extent report to be
+								// generated.
 
 	}
 
@@ -57,6 +58,7 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 		testReport.get().fail(result.getThrowable().getMessage().toString());
 
 		String exceptionMessage = Arrays.toString(result.getThrowable().getStackTrace());
+
 		testReport.get()
 				.fail("<details>" + "<summary>" + "<b>" + "<font color=" + "red>" + "Exception Occured:Click to see"
 						+ "</font>" + "</b >" + "</summary>" + exceptionMessage.replaceAll(",", "<br>") + "</details>"
@@ -105,14 +107,7 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 
 	public void onFinish(ISuite suite) {
 
-		try {
-			messageBody = "http://" + InetAddress.getLocalHost().getHostAddress()
-					+ ":8080/job/APITestingFramework/Extent_20Reports/" + fileName;
-		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
+		// TODO Auto-generated method stub
 	}
 
 }

@@ -17,7 +17,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry excluding="**|Logs/" kind="src" output="target/test-classes" path="src/test/resources">
+	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
@@ -32,14 +32,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/anilkumar06/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar" sourcepath="C:/Users/anilkumar06/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="com.relevantcodes"/>
-			<attribute name="maven.artifactId" value="extentreports"/>
-			<attribute name="maven.version" value="2.41.2"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="output" path="test-output"/>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>

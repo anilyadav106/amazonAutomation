@@ -18,9 +18,10 @@ import DataProvider.DataUtil;
 
 public class amazonLoginInvalidUser extends testbase {
 
-	public String uName = config.getProperty("userID");
-	public String uPwd = config.getProperty("password");
-
+	/*
+	 * public String uName = config.getProperty("userID"); public String uPwd =
+	 * config.getProperty("password");
+	 */
 	loginPage login;
 
 	@BeforeTest
@@ -43,7 +44,7 @@ public class amazonLoginInvalidUser extends testbase {
 		driver.close();
 	}
 
-	@Test(dataProviderClass = DataUtil.class, dataProvider = "data", groups = ("smoke"), priority = 2, enabled = true)
+	@Test(dataProviderClass = DataUtil.class, dataProvider = "data", groups = ("smoke"), priority = 0, enabled = true)
 	public void invalidUserLoginTest(Hashtable<String, String> data) throws IOException {
 
 		String runMode = data.get("Runmode");

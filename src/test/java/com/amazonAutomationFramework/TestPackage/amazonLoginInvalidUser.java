@@ -18,10 +18,6 @@ import DataProvider.DataUtil;
 
 public class amazonLoginInvalidUser extends testbase {
 
-	/*
-	 * public String uName = config.getProperty("userID"); public String uPwd =
-	 * config.getProperty("password");
-	 */
 	loginPage login;
 
 	@BeforeTest
@@ -53,7 +49,7 @@ public class amazonLoginInvalidUser extends testbase {
 			throw new SkipException("Skipping the test as runMode equals N");
 
 		} else {
-
+			log.debug("Entering invalid UID and PWD");
 			ExtentListeners.test.log(Status.INFO, "Entering username as :" + data.get("UID"));
 			ExtentListeners.test.log(Status.INFO, "Entering password as :" + data.get("PWD"));
 			login.amazonLogin(data.get("UID"), data.get("PWD"));
@@ -62,6 +58,7 @@ public class amazonLoginInvalidUser extends testbase {
 			if (login.isImportantMessageDisplayed() || login.isAuthencticationRequiredDisplayed()) {
 				ExtentListeners.test.log(Status.SKIP,
 						"Amazon has deducted auto login from selenuim so skipping the test ");
+				log.debug("Skipping the test because mazon has deducted auto login from selenuim so skipping the test");
 				throw new SkipException("Skipping the test as amazon has deducted automated login, try login later");
 
 			} else
@@ -69,6 +66,7 @@ public class amazonLoginInvalidUser extends testbase {
 				Assert.assertTrue(login.isIncorrectPasswordTextDisplayed(),
 						"Incorrect password text is not displayed, seems login was successful for invalid credentials");
 			ExtentListeners.test.log(Status.INFO, "Incorrect password login is restricted ");
+			log.debug("Incorrect password login is restricted ");
 		}
 
 	}

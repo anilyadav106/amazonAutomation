@@ -20,7 +20,7 @@ public class addProductToCart extends testbase {
 
 	public homePage home;
 
-	/*This is method to initialize page objects in test class */
+	/* This is method to initialize page objects in test class */
 
 	@BeforeMethod
 	public void testSetup() {
@@ -50,7 +50,7 @@ public class addProductToCart extends testbase {
 			throw new SkipException("Skipping the test as runMode equals N");
 
 		} else {
-
+			log.debug("Adding the product");
 			ExtentListeners.test.log(Status.INFO, "Add to product test started for :" + data.get("productName"));
 
 			home.addtoCartAProduct(data.get("productName"));
@@ -58,6 +58,7 @@ public class addProductToCart extends testbase {
 			Assert.assertTrue(home.getAddedToCartSuccessMessage().isDisplayed(),
 					"Product is not added to cart successfuly");
 			ExtentListeners.test.log(Status.INFO, "Product added to cart  ");
+			log.debug("Product added to cart successfully.");
 		}
 
 	}

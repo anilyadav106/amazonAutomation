@@ -51,12 +51,13 @@ public class couponsCategory extends testbase {
 			throw new SkipException("Skipping the test as runMode equals N");
 
 		} else {
-			System.out.println("Inside Test method...");
+			log.debug("Searching coupon category ");
 			ExtentListeners.test.log(Status.INFO, "Searching coupon category for : " + data.get("categoryText"));
 			couponspage.selectCouponsCategory(data.get("categoryText"));
 			ExtentListeners.test.log(Status.INFO, "  coupon category  has been searched ");
 			Assert.assertEquals(driver.getTitle(), couponspage.getWatchesPageTitle(), "Watches title is not matched");
 			ExtentListeners.test.log(Status.INFO, "Required coupon category is found ");
+			log.debug("Required coupon category is found ");
 		}
 
 	}

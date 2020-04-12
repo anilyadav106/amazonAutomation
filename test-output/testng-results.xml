@@ -2,15 +2,15 @@
 <testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="23" started-at="2020-04-11T15:08:10Z" finished-at="2020-04-11T15:08:10Z">
+  <suite name="Default suite" duration-ms="22" started-at="2020-04-12T08:41:12Z" finished-at="2020-04-12T08:41:12Z">
     <groups>
       <group name="sanity">
-        <method signature="addProductToCart.productAddtoCartTest(java.util.Hashtable)[pri:0, instance:com.amazonAutomationFramework.TestPackage.addProductToCart@62379589]" name="productAddtoCartTest" class="com.amazonAutomationFramework.TestPackage.addProductToCart"/>
+        <method signature="addProductToCart.productAddtoCartTest(java.util.Hashtable)[pri:0, instance:com.amazonAutomationFramework.TestPackage.addProductToCart@7c7b252e]" name="productAddtoCartTest" class="com.amazonAutomationFramework.TestPackage.addProductToCart"/>
       </group> <!-- sanity -->
     </groups>
-    <test name="Default test" duration-ms="23" started-at="2020-04-11T15:08:10Z" finished-at="2020-04-11T15:08:10Z">
+    <test name="Default test" duration-ms="22" started-at="2020-04-12T08:41:12Z" finished-at="2020-04-12T08:41:12Z">
       <class name="com.amazonAutomationFramework.TestPackage.addProductToCart">
-        <test-method status="SKIP" signature="productAddtoCartTest(java.util.Hashtable)[pri:0, instance:com.amazonAutomationFramework.TestPackage.addProductToCart@62379589]" name="productAddtoCartTest" duration-ms="0" started-at="2020-04-11T20:38:10Z" data-provider="data" finished-at="2020-04-11T20:38:10Z">
+        <test-method status="SKIP" signature="productAddtoCartTest(java.util.Hashtable)[pri:0, instance:com.amazonAutomationFramework.TestPackage.addProductToCart@7c7b252e]" name="productAddtoCartTest" duration-ms="0" started-at="2020-04-12T14:11:12Z" data-provider="data" finished-at="2020-04-12T14:11:12Z">
           <exception class="java.lang.RuntimeException">
             <message>
               <![CDATA[java.lang.NullPointerException]]>

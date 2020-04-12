@@ -51,7 +51,7 @@ public class couponSort extends testbase {
 			throw new SkipException("Skipping the test as runMode equals N");
 
 		} else {
-			System.out.println("Inside Test method...");
+			log.debug("Coupon sort test started ");
 			ExtentListeners.test.log(Status.INFO, "Coupon sort test started for :" + data.get("sortText"));
 			String sortText = data.get("sortText");
 
@@ -60,6 +60,7 @@ public class couponSort extends testbase {
 			Assert.assertTrue(couponspage.isAllCouponsTextDisplayed(),
 					"All coupons text is not displayed , means user is not on copouns sort page.");
 			ExtentListeners.test.log(Status.INFO, "Coupon sorted successfully");
+			log.debug("Coupon sorted successfully ");
 		}
 	}
 }

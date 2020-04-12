@@ -12,6 +12,8 @@
     <artifactId>webdrivermanager</artifactId>
     <version>3.6.2</version>
 </dependency>
+
+
    
      <dependency>
 			<groupId>com.aventstack</groupId>
@@ -88,8 +90,7 @@
             <plugin>
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-surefire-plugin</artifactId>
-                 <version>2.21.0</version>
-                 
+                 <version>2.21.0</version>                 
                 <configuration>                           
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>

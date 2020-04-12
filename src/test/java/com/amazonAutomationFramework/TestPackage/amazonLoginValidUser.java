@@ -50,7 +50,7 @@ public class amazonLoginValidUser extends testbase {
 		if (runMode.equalsIgnoreCase("N")) {
 			throw new SkipException("Skipping the test as runMode equals N");
 		} else if (runMode.equalsIgnoreCase("Y")) {
-			System.out.println("Inside Test method...");
+			log.debug("Entering valid UID and PWD");
 			ExtentListeners.test.log(Status.INFO, "Entering username as :" + data.get("UID"));
 			ExtentListeners.test.log(Status.INFO, "Entering password as :" + data.get("PWD"));
 
@@ -59,6 +59,7 @@ public class amazonLoginValidUser extends testbase {
 			if (login.isImportantMessageDisplayed() || login.isAuthencticationRequiredDisplayed()) {
 				ExtentListeners.test.log(Status.SKIP,
 						"Amazon has deducted auto login from selenuim so skipping the test ");
+				log.debug("Skipping the test as Amazon has deducted auto login from selenuim so skipping the test");
 				throw new SkipException("Skipping the test as amazon has deducted automated login, try login later");
 
 			} else
@@ -68,8 +69,7 @@ public class amazonLoginValidUser extends testbase {
 			Assert.assertTrue(login.isloginPage1stButtonDisplayed(),
 					"Amazon menu is not displayed, seems login was not succesful for valid credentials");
 			ExtentListeners.test.log(Status.INFO, "User with Correct username and password login is allowed to login ");
-			// System.out.println("Inside amazon log out method");
-			// login.amazonLogout();
+			log.debug("User with Correct username and password login is allowed to login");
 		}
 
 	}

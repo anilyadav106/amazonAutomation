@@ -30,7 +30,7 @@ public class testbase {
 	public static FileInputStream fis;
 	public static WebDriver driver;
 	public static ExcelReader excel = new ExcelReader(".\\src\\test\\resources\\Excel\\TestData.xlsx");
-	public static Logger log = Logger.getLogger("devpinoyLogger");
+	public static Logger log = Logger.getLogger(testbase.class);
 
 	/*
 	 * method to launch the browser basis the value provided from config file it

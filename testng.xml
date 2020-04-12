@@ -19,43 +19,26 @@
 			<class name="com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser" />
 		</classes>
 	</test> <!-- Test -->
-	
-
 	<test name="couponsCategoryTest"  >
 		<classes>
-
 			<class name="com.amazonAutomationFramework.TestPackage.couponsCategory" />
-
-
 		</classes>
 	</test> <!-- Test -->
-
 	<test name="CouponsSortTest"  >
 		<classes>
-
 			<class name="com.amazonAutomationFramework.TestPackage.couponSort" />
-
-
 		</classes>
 	</test> <!-- Test -->
-
 	<test name="SearchByCategoryTest"  >
 		<classes>
-
-
 			<class name="com.amazonAutomationFramework.TestPackage.searchByCategory" />
-
-
-		</classes>
+	</classes>
 	</test> <!-- Test -->
 	
 	
 	<test name="addToCartTest"  >
 		<classes>
-
-
 			<class name="com.amazonAutomationFramework.TestPackage.addProductToCart" />
-
 		</classes>
 	</test> <!-- Test -->
  

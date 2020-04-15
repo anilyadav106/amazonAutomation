@@ -7,13 +7,17 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.amazonAutomationFramework.basePack.testbase;
-
-public class loginPage extends testbase {
+public class loginPage {
+	/*
+	 * Constructor to initialize driver from the test class which will use this
+	 * page and that driver to initialize objects of this page using
+	 * .initElements method of page factory
+	 */
+	WebDriver driver;
 
 	public loginPage(WebDriver driver) {
 
-		loginPage.driver = driver;
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 

@@ -43,7 +43,7 @@ public class commonMethods extends testbase {
 			sel.selectByVisibleText(elementText);
 
 		} catch (Exception e) {
-			System.out.println("Element not selectable in the drpdown   : ");
+			System.out.println("Element not selectable in the drpdown  ");
 			e.printStackTrace();
 		}
 

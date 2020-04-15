@@ -11,13 +11,18 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.amazonAutomationFramework.CommonMethods.commonMethods;
-import com.amazonAutomationFramework.basePack.testbase;
 
-public class homePage extends testbase {
+public class homePage {
+	/*
+	 * Constructor to initialize driver from the test class which will use this
+	 * page and that driver to initialize objects of this page using
+	 * .initElements method of page factory
+	 */
+	WebDriver driver;
 
 	public homePage(WebDriver driver) {
 
-		homePage.driver = driver;
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 

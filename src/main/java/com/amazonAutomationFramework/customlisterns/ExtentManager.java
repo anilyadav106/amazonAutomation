@@ -16,8 +16,6 @@ public class ExtentManager {
 		extent.setSystemInfo("Organization", "Nagarro");
 		extent.setSystemInfo("Build no", "NAGARRO-1234");
 
-		// htmlReporter = new ExtentHtmlReporter(fileName);
-
 		htmlReporter.config().setTheme(Theme.DARK);
 		htmlReporter.config().setDocumentTitle("Extent report Page Title");
 		htmlReporter.config().setEncoding("utf-8");

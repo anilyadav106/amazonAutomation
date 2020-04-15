@@ -33,16 +33,18 @@ public class testbase {
 	public static Logger log = Logger.getLogger(testbase.class);
 
 	/*
-	 * method to launch the browser basis the value provided from config file it
-	 * can launch chrome,firefox or IE browsers
+	 * method to launch the browser basis the value provided from configuration
+	 * file
 	 */
-	public void launchbrowser() throws IOException {
+	public static void launchbrowser() throws IOException {
 		fis = new FileInputStream(".\\src\\test\\resources\\properties\\config.properties");
 		config.load(fis);
 
 		log.debug("Launching the desired browser");
 		if (config.getProperty("browser").contains("CHROME")) {
 			log.debug("Launching chrome browser");
+			// WebDriverManager.chromedriver().version("2.00").setup(); //
+			// specific version of chromeDriver
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.setPageLoadStrategy(PageLoadStrategy.NONE);
@@ -71,9 +73,13 @@ public class testbase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
 	}
 
-	/* method to launch capture screenshot */
+	/*
+	 * Static Method to launch capture screenshot in case of failure of test
+	 * case. Failure of TC is decided from listener class' onTestFailure method
+	 */
 
 	public static void captureScreeshot() {
 		log.debug("Launching the capture screen shot");

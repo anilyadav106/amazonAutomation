@@ -30,8 +30,7 @@ public class searchByCategory extends testbase {
 			driver.get(config.getProperty("baseURL"));
 			home = new homePage(driver);
 
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (IOException e) { // TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

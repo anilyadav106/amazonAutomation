@@ -8,8 +8,9 @@ import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 
-import com.amazonAutomationFramework.basePack.testbase;
+import com.amazonAutomationFramework.CommonMethods.commonMethods;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -69,7 +70,7 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 		testReport.get().log(Status.FAIL, m);
 
 		/* to capture screen shot also for failure */
-		testbase.captureScreeshot();
+		commonMethods.captureScreeshot();
 	}
 
 	public void onTestSkipped(ITestResult result) {
@@ -79,15 +80,6 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 		String logText = "<b>" + "Test Case:- " + methodName + " Skipped" + "</b>";
 		Markup m = MarkupHelper.createLabel(logText, ExtentColor.YELLOW);
 		testReport.get().skip(m);
-
-	}
-
-	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		// TODO Auto-generated method stub
-
-	}
-
-	public void onStart(ITestContext context) {
 
 	}
 
@@ -101,13 +93,23 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 	}
 
 	public void onStart(ISuite suite) {
-		// TODO Auto-generated method stub
+		Reporter.log("test suite started");
 
 	}
 
 	public void onFinish(ISuite suite) {
 
+		Reporter.log("test suite ended");
+	}
+
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		// TODO Auto-generated method stub
+
+	}
+
+	public void onStart(ITestContext context) {
+		// TODO Auto-generated method stub
+
 	}
 
 }

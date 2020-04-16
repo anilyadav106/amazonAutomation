@@ -1,5 +1,11 @@
 package com.amazonAutomationFramework.CommonMethods;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -7,6 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.amazonAutomationFramework.basePack.testbase;
+import com.amazonAutomationFramework.constants.constants;
 
 public class commonMethods extends testbase {
 
@@ -19,7 +26,6 @@ public class commonMethods extends testbase {
 	public static void selectElementFromDropDownNonSelect(WebElement elem, String ddvalue) {
 
 		try {
-
 			Actions act = new Actions(driver);
 			act.moveToElement(elem).click().perform();
 			act.sendKeys(ddvalue).perform();
@@ -28,7 +34,6 @@ public class commonMethods extends testbase {
 			System.out.println("Element not selectable in the drpdown   : ");
 			e.printStackTrace();
 		}
-
 	}
 
 	/*
@@ -63,4 +68,20 @@ public class commonMethods extends testbase {
 
 	}
 
+	/*
+	 * Static Method to launch capture screenshot in case of failure of test
+	 * case. Failure of TC is decided from listener class' onTestFailure method
+	 */
+
+	public static void captureScreeshot() {
+		log.debug("Launching the capture screen shot");
+
+		try {
+			File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(source, constants.destination);
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+	}
 }

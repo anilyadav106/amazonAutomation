@@ -1,16 +1,12 @@
 package com.amazonAutomationFramework.basePack;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.OutputType;
 import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -19,7 +15,6 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.CapabilityType;
 
-import com.amazonAutomationFramework.constants.constants;
 import com.amazonFramework.utilities.ExcelReader;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -37,18 +32,24 @@ public class testbase {
 	 * file
 	 */
 	public static void launchbrowser() throws IOException {
-		fis = new FileInputStream(".\\src\\test\\resources\\properties\\config.properties");
-		config.load(fis);
+
+		try {
+			fis = new FileInputStream(".\\src\\test\\resources\\properties\\config.properties");
+			config.load(fis);
+		} catch (Exception e) {
+			System.out.println("unable to read the config properties");
+			e.printStackTrace();
+		}
 
 		log.debug("Launching the desired browser");
 		if (config.getProperty("browser").contains("CHROME")) {
 			log.debug("Launching chrome browser");
-			// WebDriverManager.chromedriver().version("2.00").setup(); //
-			// specific version of chromeDriver
+
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.setPageLoadStrategy(PageLoadStrategy.NONE);
-			driver = new ChromeDriver(options);
+			options.addArguments("disable-infobars");
+			driver = new ChromeDriver(options); // add option to constructor
 
 		} else if (config.getProperty("browser").contains("FF")) {
 			log.debug("Launching FF browser");
@@ -73,24 +74,6 @@ public class testbase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-
-	}
-
-	/*
-	 * Static Method to launch capture screenshot in case of failure of test
-	 * case. Failure of TC is decided from listener class' onTestFailure method
-	 */
-
-	public static void captureScreeshot() {
-		log.debug("Launching the capture screen shot");
-
-		try {
-			File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(source, constants.destination);
-		} catch (IOException e) {
-
-			e.printStackTrace();
-		}
 
 	}
 

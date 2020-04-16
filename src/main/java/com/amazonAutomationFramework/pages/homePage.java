@@ -14,11 +14,10 @@ import com.amazonAutomationFramework.CommonMethods.commonMethods;
 
 public class homePage {
 	/*
-	 * Constructor to initialize driver from the test class which will use this
-	 * page and that driver to initialize objects of this page using
-	 * .initElements method of page factory
+	 * Constructor- Driver is passed from test class at the time of creating
+	 * object of this class and that driver will do all required stuff here
 	 */
-	WebDriver driver;
+	private WebDriver driver;
 
 	public homePage(WebDriver driver) {
 

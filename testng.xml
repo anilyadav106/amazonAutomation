@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="AmazonAutomationSuite" parallel="false"  preserve-order="true">
+<suite name="AmazonAutomationSuite" parallel="classes"  preserve-order="true">
 
 	<listeners>
 		<listener
@@ -10,16 +10,21 @@
 	
 	<test name="loginTestValidUser"  >
 		<classes>
-			<class name="com.amazonAutomationFramework.TestPackage.amazonLoginValidUser" />
+			<class name="com.amazonAutomationFramework.TestPackage.amazonLoginValidUser" >
+		 
+        </class>
 		</classes>
+		
 	</test> <!-- Test -->
 	
 		<test name="loginTestInnalidUser"  >
 		<classes>
 			<class name="com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser" />
+		
 		</classes>
 	</test> <!-- Test -->
 	<test name="couponsCategoryTest"  >
+	 
 		<classes>
 			<class name="com.amazonAutomationFramework.TestPackage.couponsCategory" />
 		</classes>

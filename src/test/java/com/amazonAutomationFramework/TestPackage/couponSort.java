@@ -19,8 +19,9 @@ import DataProvider.DataUtil;
 public class couponSort extends testbase {
 
 	couponsPage couponspage;
-
-	/* method to initialize page objects in test class */
+	/*
+	 * method to initialize page objects in test class / /
+	 */
 
 	@BeforeTest
 	public void testSetup() {
@@ -30,8 +31,7 @@ public class couponSort extends testbase {
 			driver.get(config.getProperty("baseURL"));
 			couponspage = new couponsPage(driver);
 
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (IOException e) { // TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

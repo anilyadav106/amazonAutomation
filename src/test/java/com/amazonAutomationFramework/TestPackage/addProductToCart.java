@@ -20,7 +20,9 @@ public class addProductToCart extends testbase {
 
 	public homePage home;
 
-	/* This is method to initialize page objects in test class */
+	/*
+	 * / This is method to initialize page objects in test class/
+	 */
 
 	@BeforeMethod
 	public void testSetup() {
@@ -30,8 +32,7 @@ public class addProductToCart extends testbase {
 			driver.get(config.getProperty("baseURL"));
 			home = new homePage(driver);
 
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (IOException e) { // TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

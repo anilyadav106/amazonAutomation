@@ -16,13 +16,15 @@ import com.aventstack.extentreports.Status;
 
 import DataProvider.DataUtil;
 
-/*coupons > shop by category > select category*/
+//coupons>shop by category>select category//
+
 public class couponsCategory extends testbase {
 
 	couponsPage couponspage;
 
-	/* method to initialize page objects in test class */
-
+	/*
+	 * // method to initialize page objects in test class//
+	 */
 	@BeforeTest
 	public void testSetup() {
 
@@ -31,8 +33,7 @@ public class couponsCategory extends testbase {
 			driver.get(config.getProperty("baseURL"));
 			couponspage = new couponsPage(driver);
 
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (IOException e) { // TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

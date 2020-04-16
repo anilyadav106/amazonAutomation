@@ -28,8 +28,7 @@ public class amazonLoginInvalidUser extends testbase {
 			driver.get(config.getProperty("baseURL"));
 			login = new loginPage(driver);
 
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (IOException e) { // TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

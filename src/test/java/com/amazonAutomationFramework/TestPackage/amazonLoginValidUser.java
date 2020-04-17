@@ -18,27 +18,26 @@ import DataProvider.DataUtil;
 
 public class amazonLoginValidUser extends testbase {
 
-	loginPage login;
+	private loginPage login;
 
 	@BeforeTest
-	public void beforeMethodSetup() {
+	public void testSetup() {
 
 		try {
 			launchbrowser();
 			driver.get(config.getProperty("baseURL"));
 			login = new loginPage(driver);
 
-		} catch (IOException e) {
+		} catch (IOException e) { // TODO Auto-generated catch block
 			e.printStackTrace();
-			e.getMessage();
 		}
-
 	}
 
 	@AfterTest
 	public void afterMethodTearDown() {
-
-		driver.close();
+		if (driver != null) {
+			driver.quit();
+		}
 	}
 
 	@Test(dataProviderClass = DataUtil.class, dataProvider = "data", groups = ("smoke"), priority = 1, enabled = true)

@@ -18,10 +18,9 @@ import DataProvider.DataUtil;
 
 public class searchByCategory extends testbase {
 
-	homePage home;
+	private homePage home;
 
 	/* method to initialize page objects in test class */
-
 	@BeforeTest
 	public void testSetup() {
 
@@ -37,11 +36,12 @@ public class searchByCategory extends testbase {
 
 	@AfterTest
 	public void afterMethodTearDown() {
-
-		driver.close();
+		if (driver != null) {
+			driver.quit();
+		}
 	}
 
-	@Test(dataProviderClass = DataUtil.class, dataProvider = "data", groups = ("sanity"))
+	@Test(dataProviderClass = DataUtil.class, dataProvider = "data", groups = ("integration"))
 	public void categorySelectTest(Hashtable<String, String> data) throws InterruptedException {
 		String runMode = data.get("Runmode");
 

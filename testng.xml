@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="AmazonAutomationSuite" parallel="classes"  preserve-order="true">
+<suite name="AmazonAutomationSuite" parallel="none"  preserve-order="true">
 
+ 
 	<listeners>
 		<listener
 			class-name="com.amazonAutomationFramework.customlisterns.ExtentListeners">
 		</listener>
 	</listeners>
 	
-	<test name="loginTestValidUser"  >
+	
+	
+	<test name="loginTestValidUser"  >	
+	
+	
 		<classes>
 			<class name="com.amazonAutomationFramework.TestPackage.amazonLoginValidUser" >
 		 

@@ -20,7 +20,7 @@ import DataProvider.DataUtil;
 
 public class couponsCategory extends testbase {
 
-	couponsPage couponspage;
+	private couponsPage couponspage;
 
 	/*
 	 * // method to initialize page objects in test class//
@@ -40,11 +40,12 @@ public class couponsCategory extends testbase {
 
 	@AfterTest
 	public void afterMethodTearDown() {
-
-		driver.close();
+		if (driver != null) {
+			driver.quit();
+		}
 	}
 
-	@Test(dataProviderClass = DataUtil.class, dataProvider = "data")
+	@Test(dataProviderClass = DataUtil.class, dataProvider = "data", groups = { "sanity" })
 	public void couponCategoryTest(Hashtable<String, String> data) {
 		String runMode = data.get("Runmode");
 

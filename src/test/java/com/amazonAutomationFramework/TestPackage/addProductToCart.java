@@ -18,7 +18,7 @@ import DataProvider.DataUtil;
 
 public class addProductToCart extends testbase {
 
-	public homePage home;
+	private homePage home;
 
 	/*
 	 * / This is method to initialize page objects in test class/
@@ -39,11 +39,12 @@ public class addProductToCart extends testbase {
 
 	@AfterMethod
 	public void afterMethodTearDown() {
-
-		driver.quit();
+		if (driver != null) {
+			driver.quit();
+		}
 	}
 
-	@Test(dataProviderClass = DataUtil.class, dataProvider = "data", groups = ("sanity"))
+	@Test(dataProviderClass = DataUtil.class, dataProvider = "data", groups = ("integration"))
 	public void productAddtoCartTest(Hashtable<String, String> data) {
 		String runMode = data.get("Runmode");
 

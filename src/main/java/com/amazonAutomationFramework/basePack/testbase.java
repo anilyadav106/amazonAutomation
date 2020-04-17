@@ -21,7 +21,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class testbase {
 
-	public static Properties config = new Properties();
+	public Properties config = new Properties();
 	public static FileInputStream fis;
 	public static WebDriver driver;
 	public static ExcelReader excel = new ExcelReader(".\\src\\test\\resources\\Excel\\TestData.xlsx");
@@ -31,13 +31,14 @@ public class testbase {
 	 * method to launch the browser basis the value provided from configuration
 	 * file
 	 */
-	public static void launchbrowser() throws IOException {
+
+	public void launchbrowser() throws IOException {
 
 		try {
 			fis = new FileInputStream(".\\src\\test\\resources\\properties\\config.properties");
 			config.load(fis);
 		} catch (Exception e) {
-			System.out.println("unable to read the config properties");
+			System.out.println("unable to read the config properties file");
 			e.printStackTrace();
 		}
 

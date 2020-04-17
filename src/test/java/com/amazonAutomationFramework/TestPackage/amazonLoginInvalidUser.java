@@ -5,8 +5,8 @@ import java.util.Hashtable;
 
 import org.testng.Assert;
 import org.testng.SkipException;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.amazonAutomationFramework.basePack.testbase;
@@ -18,10 +18,10 @@ import DataProvider.DataUtil;
 
 public class amazonLoginInvalidUser extends testbase {
 
-	loginPage login;
+	private loginPage login;
 
-	@BeforeTest
-	public void beforeMethodSetup() {
+	@BeforeMethod
+	public void testSetup() {
 
 		try {
 			launchbrowser();
@@ -33,10 +33,11 @@ public class amazonLoginInvalidUser extends testbase {
 		}
 	}
 
-	@AfterTest
+	@AfterMethod
 	public void afterMethodTearDown() {
-
-		driver.close();
+		if (driver != null) {
+			driver.quit();
+		}
 	}
 
 	@Test(dataProviderClass = DataUtil.class, dataProvider = "data", groups = ("smoke"), priority = 0, enabled = true)

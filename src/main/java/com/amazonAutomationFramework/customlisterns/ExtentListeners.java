@@ -21,9 +21,8 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 public class ExtentListeners implements ITestListener, ISuiteListener {
 
 	static Date d = new Date();
-	// static String fileName = "Extent_" + d.toString().replace(":",
-	// "_").replace(" ", "_") + ".html";
-	static String fileName = "Extent_Report_noTimeStamp" + ".html";
+	static String fileName = "Extent_" + d.toString().replace(":", "_").replace(" ", "_") + ".html";
+	// static String fileName = "Extent_Report_noTimeStamp" + ".html";
 
 	public static ExtentReports extent = ExtentManager
 			.createReport(System.getProperty("user.dir") + "\\reports\\" + fileName);
@@ -67,6 +66,7 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 
 		String failureLogg = "TEST CASE FAILED";
 		Markup m = MarkupHelper.createLabel(failureLogg, ExtentColor.RED);
+
 		testReport.get().log(Status.FAIL, m);
 
 		/* to capture screen shot also for failure */

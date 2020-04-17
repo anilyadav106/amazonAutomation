@@ -5,17 +5,13 @@
  
 	<listeners>
 		<listener
-			class-name="com.amazonAutomationFramework.customlisterns.ExtentListeners">
+			class-name="com.amazon.automation.customlisterns.ExtentListeners">
 		</listener>
 	</listeners>
-	
-	
-	
+	 
 	<test name="loginTestValidUser"  >	
-	
-	
 		<classes>
-			<class name="com.amazonAutomationFramework.TestPackage.amazonLoginValidUser" >
+			<class name="com.amazon.automation.testpackage.ValidUserLogin" >
 		 
         </class>
 		</classes>
@@ -24,31 +20,31 @@
 	
 		<test name="loginTestInnalidUser"  >
 		<classes>
-			<class name="com.amazonAutomationFramework.TestPackage.amazonLoginInvalidUser" />
+			<class name="com.amazon.automation.testpackage.InvalidUserLogin" />
 		
 		</classes>
 	</test> <!-- Test -->
 	<test name="couponsCategoryTest"  >
 	 
 		<classes>
-			<class name="com.amazonAutomationFramework.TestPackage.couponsCategory" />
+			<class name="com.amazon.automation.testpackage.SelectCouponsCategory" />
 		</classes>
 	</test> <!-- Test -->
 	<test name="CouponsSortTest"  >
 		<classes>
-			<class name="com.amazonAutomationFramework.TestPackage.couponSort" />
+			<class name="com.amazon.automation.testpackage.SortCoupons" />
 		</classes>
 	</test> <!-- Test -->
 	<test name="SearchByCategoryTest"  >
 		<classes>
-			<class name="com.amazonAutomationFramework.TestPackage.searchByCategory" />
+			<class name="com.amazon.automation.testpackage.SearchByCategory" />
 	</classes>
 	</test> <!-- Test -->
 	
 	
 	<test name="addToCartTest"  >
 		<classes>
-			<class name="com.amazonAutomationFramework.TestPackage.addProductToCart" />
+			<class name="com.amazon.automation.testpackage.AddToCart" />
 		</classes>
 	</test> <!-- Test -->
  

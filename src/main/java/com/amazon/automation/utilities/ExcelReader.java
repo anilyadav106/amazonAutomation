@@ -46,8 +46,13 @@ public class ExcelReader {
 	}
 
 	// returns the row count in a sheet
+
 	public int getRowCount(String sheetName) {
-		int index = workbook.getSheetIndex(sheetName);
+
+		int index = 0;
+		// need to update here
+		// workbook.getSheetIndex(sheetName);
+
 		if (index == -1)
 			return 0;
 		else {
@@ -123,7 +128,9 @@ public class ExcelReader {
 			if (rowNum <= 0)
 				return "";
 
-			int index = workbook.getSheetIndex(sheetName);
+			int index = 0;
+			// update here
+			// workbook.getSheetIndex(sheetName);
 
 			if (index == -1)
 				return "";
@@ -355,38 +362,6 @@ public class ExcelReader {
 	}
 
 	// removes a column and all the contents
-	public boolean removeColumn(String sheetName, int colNum) {
-		try {
-			if (!isSheetExist(sheetName))
-				return false;
-			fis = new FileInputStream(path);
-			workbook = new XSSFWorkbook(fis);
-			sheet = workbook.getSheet(sheetName);
-			XSSFCellStyle style = workbook.createCellStyle();
-			style.setFillForegroundColor(HSSFColor.HSSFColorPredefined.GREY_40_PERCENT.getIndex());
-			XSSFCreationHelper createHelper = workbook.getCreationHelper();
-			style.setFillPattern(FillPatternType.NO_FILL);
-
-			for (int i = 0; i < getRowCount(sheetName); i++) {
-				row = sheet.getRow(i);
-				if (row != null) {
-					cell = row.getCell(colNum);
-					if (cell != null) {
-						cell.setCellStyle(style);
-						row.removeCell(cell);
-					}
-				}
-			}
-			fileOut = new FileOutputStream(path);
-			workbook.write(fileOut);
-			fileOut.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-			return false;
-		}
-		return true;
-
-	}
 
 	// find whether sheets exists
 	public boolean isSheetExist(String sheetName) {
@@ -419,35 +394,5 @@ public class ExcelReader {
 
 	// String sheetName, String testCaseName,String keyword ,String URL,String
 	// message
-	public boolean addHyperLink(String sheetName, String screenShotColName, String testCaseName, int index, String url,
-			String message) {
-
-		url = url.replace('\\', '/');
-		if (!isSheetExist(sheetName))
-			return false;
-
-		sheet = workbook.getSheet(sheetName);
-
-		for (int i = 2; i <= getRowCount(sheetName); i++) {
-			if (getCellData(sheetName, 0, i).equalsIgnoreCase(testCaseName)) {
-
-				setCellData(sheetName, screenShotColName, i + index, message, url);
-				break;
-			}
-		}
-
-		return true;
-	}
-
-	public int getCellRowNum(String sheetName, String colName, String cellValue) {
-
-		for (int i = 2; i <= getRowCount(sheetName); i++) {
-			if (getCellData(sheetName, colName, i).equalsIgnoreCase(cellValue)) {
-				return i;
-			}
-		}
-		return -1;
-
-	}
 
 }

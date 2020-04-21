@@ -1,6 +1,6 @@
 package com.amazon.automation.customlisterns;
 
-import java.util.Arrays;
+import java.io.IOException;
 import java.util.Date;
 
 import org.testng.ISuite;
@@ -13,6 +13,7 @@ import org.testng.Reporter;
 import com.amazon.automation.commonmethods.CommonMethods;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.Markup;
@@ -21,8 +22,9 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 public class ExtentListeners implements ITestListener, ISuiteListener {
 
 	static Date d = new Date();
-	static String fileName = "Extent_" + d.toString().replace(":", "_").replace(" ", "_") + ".html";
-	// static String fileName = "Extent_Report_noTimeStamp" + ".html";
+	// static String fileName = "Extent_" + d.toString().replace(":",
+	// "_").replace(" ", "_") + ".html";
+	static String fileName = "Extent_Report_noTimeStamp" + ".html";
 
 	public static ExtentReports extent = ExtentManager
 			.createReport(System.getProperty("user.dir") + "\\reports\\" + fileName);
@@ -55,22 +57,26 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 	public void onTestFailure(ITestResult result) {
 		System.out.println("Test failed for : " + result.getMethod().getMethodName());
 
-		testReport.get().fail(result.getThrowable().getMessage().toString());
-
-		String exceptionMessage = Arrays.toString(result.getThrowable().getStackTrace());
+		String exceptionMessage = result.getThrowable().getMessage();
 
 		testReport.get()
-				.fail("<details>" + "<summary>" + "<b>" + "<font color=" + "red>" + "Exception Occured:Click to see"
-						+ "</font>" + "</b >" + "</summary>" + exceptionMessage.replaceAll(",", "<br>") + "</details>"
-						+ " \n");
+				.fail("<details>" + "<summary>" + "<b>" + "<font color=" + "red>"
+						+ "Exception Occured: Click here to see" + "</font>" + "</b >" + "</summary>"
+						+ exceptionMessage.replaceAll(",", "<br>") + "</details>" + " \n");
+		/* to capture screen shot also for failure */
+		String path = CommonMethods.captureScreeshot();
 
+		try {
+			test.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(path).build());
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
 		String failureLogg = "TEST CASE FAILED";
 		Markup m = MarkupHelper.createLabel(failureLogg, ExtentColor.RED);
 
 		testReport.get().log(Status.FAIL, m);
 
-		/* to capture screen shot also for failure */
-		CommonMethods.captureScreeshot();
 	}
 
 	public void onTestSkipped(ITestResult result) {

@@ -21,6 +21,7 @@ public class CouponsPage {
 
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+
 	}
 
 	@FindBy(xpath = "//div[@id='nav-xshop']//a[text()='Coupons']")
@@ -59,7 +60,7 @@ public class CouponsPage {
 	}
 
 	public void selectCouponsCategory(String category) {
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 20);
 
 		wait.until(ExpectedConditions.elementToBeClickable(couponsButton)).click();
 

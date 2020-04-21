@@ -2,8 +2,13 @@ package com.amazon.automation.commonmethods;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
+import java.util.NoSuchElementException;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.ElementNotSelectableException;
+import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
@@ -13,7 +18,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.amazon.automation.basepack.Testbase;
-import com.amazon.automation.constants.Constants;
 
 public class CommonMethods extends Testbase {
 
@@ -24,16 +28,25 @@ public class CommonMethods extends Testbase {
 	 * accepts drodown element and order of the element in the dropdown
 	 */
 	public static void selectElementFromDropDownNonSelect(WebElement elem, String ddvalue) {
-
+		Actions act = new Actions(driver);
 		try {
-			Actions act = new Actions(driver);
 			act.moveToElement(elem).click().perform();
-			act.sendKeys(ddvalue).perform();
+		}
 
+		catch (NoSuchElementException e) {
+			System.out.println("No such element found :" + e.getMessage());
+			e.printStackTrace();
+		} catch (ElementNotVisibleException e) {
+			System.out.println("Element not visible :" + e.getMessage());
+			e.printStackTrace();
+		} catch (ElementNotSelectableException e) {
+			System.out.println("Not able to select the element :" + e.getMessage());
+			e.printStackTrace();
 		} catch (Exception e) {
-			System.out.println("Element not selectable in the drpdown   : ");
+			System.out.println("An unknown exception occured:" + e.getMessage());
 			e.printStackTrace();
 		}
+		act.sendKeys(ddvalue).perform();
 	}
 
 	/*
@@ -41,31 +54,56 @@ public class CommonMethods extends Testbase {
 	 * drodown element and text of the element in the dropdow
 	 */
 	public static void selectElementFromDropDownSelect(WebElement elem, String elementText) {
-		elem.click();
-		Select sel = new Select(elem);
+
 		try {
-
-			sel.selectByVisibleText(elementText);
-
+			elem.click();
+		} catch (NoSuchElementException e) {
+			System.out.println("No such element found :" + e.getMessage());
+			e.printStackTrace();
+		} catch (ElementNotVisibleException e) {
+			System.out.println("Element not visible :" + e.getMessage());
+			e.printStackTrace();
+		} catch (ElementClickInterceptedException e) {
+			System.out.println("Not able to click on element, something interrupted the click :" + e.getMessage());
+			e.printStackTrace();
 		} catch (Exception e) {
 			System.out.println("Element not selectable in the drpdown  ");
 			e.printStackTrace();
 		}
 
+		Select sel = new Select(elem);
+
+		try {
+			sel.selectByVisibleText(elementText);
+		} catch (ElementNotSelectableException e) {
+			System.out.println("Not able to select the element :" + e.getMessage());
+			e.printStackTrace();
+		} catch (Exception e) {
+			System.out.println("Not able to select the element ,an unknown exception occured:" + e.getMessage());
+			e.printStackTrace();
+		}
 	}
 
 	public static void searchInputBox(WebElement elem, String searchText) {
-		wait.until(ExpectedConditions.elementToBeClickable(elem)).click();
+
 		try {
+			wait.until(ExpectedConditions.elementToBeClickable(elem)).click();
 
-			elem.sendKeys(searchText);
-			elem.submit();
-
+		} catch (ElementNotSelectableException e) {
+			System.out.println("Not able to select the element :" + e.getMessage());
+			e.printStackTrace();
+		} catch (ElementNotVisibleException e) {
+			System.out.println("Element not visible :" + e.getMessage());
+			e.printStackTrace();
+		} catch (NoSuchElementException e) {
+			System.out.println("No such element found :" + e.getMessage());
+			e.printStackTrace();
 		} catch (Exception e) {
-			System.out.println("Not able to enter into search box ");
+			System.out.println("An unknown exception occured:" + e.getMessage());
 			e.printStackTrace();
 		}
-
+		elem.sendKeys(searchText);
+		elem.submit();
 	}
 
 	/*
@@ -73,15 +111,25 @@ public class CommonMethods extends Testbase {
 	 * case. Failure of TC is decided from listener class' onTestFailure method
 	 */
 
-	public static void captureScreeshot() {
+	public static String captureScreeshot() {
 		log.debug("Launching the capture screen shot");
+		File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		Date d = new Date();
+		String fileName = d.toString().replace(":", "_").replace(" ", "_");
+		String path = System.getProperty("user.dir") + "/FailedTestCasesScreenshots/" + fileName + ".png";
+		File destination = new File(path);
 
 		try {
-			File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(source, Constants.destination);
-		} catch (IOException e) {
 
+			FileUtils.copyFile(source, destination);
+		} catch (IOException e) {
+			System.out.println("Error in capturing screen shot" + e.getMessage());
+			e.printStackTrace();
+		} catch (Exception e) {
+			System.out.println("An unknown exception occured while capturing screen shot:" + e.getMessage());
 			e.printStackTrace();
 		}
+		return path;
 	}
+
 }

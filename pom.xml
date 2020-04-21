@@ -24,14 +24,16 @@
 		<dependency>
     <groupId>org.apache.poi</groupId>
     <artifactId>poi-ooxml</artifactId>
-    <version>4.1.0</version>
+    <version>4.1.2</version>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/xml-apis/xml-apis -->
 <dependency>
     <groupId>xml-apis</groupId>
     <artifactId>xml-apis</artifactId>
-    <version>1.4.01</version>
+    <version>1.0.b2</version>
 </dependency>
+
    
   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
@@ -47,11 +49,13 @@
 </dependency>
 
 
+
+
 <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 <dependency>
     <groupId>org.apache.poi</groupId>
     <artifactId>poi</artifactId>
-    <version>4.1.0</version>
+    <version>4.1.2</version>
 </dependency>
  
  <dependency>
@@ -66,36 +70,39 @@
    </dependency>
  
     <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+
+
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
-    <version>6.14.3</version>
-    <scope>test</scope>
-</dependency>
-
-  <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-compiler-plugin</artifactId>
-    <version>3.8.0</version> 
-</dependency>  
-    </dependencies>    
-    
-    
+    <version>7.1.0</version>
+    <scope>compile</scope>
+</dependency> 
+     </dependencies>
+     
 <build>
         <plugins>
+        
+         <plugin>  
+                    <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>    
+                               
+                      </plugin> 
             <plugin>
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-surefire-plugin</artifactId>
                  <version>2.21.0</version>                 
                 <configuration>                           
                     <suiteXmlFiles>
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                </configuration>             
-                  </plugin>              
-   
-</plugins>          
+                        <suiteXmlFile>./src/test/resources/testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>              
+              		 <testFailureIgnore>true</testFailureIgnore>
+			              </configuration>             
+                  </plugin>  
+                  
+                 
+                      </plugins>          
             
        </build>
 </project>

@@ -20,6 +20,7 @@ public class ExtentManager {
 		htmlReporter.config().setDocumentTitle("Extent report Page Title");
 		htmlReporter.config().setEncoding("utf-8");
 		htmlReporter.config().setReportName("Test Report for Amazon Testing Framework designed by Anil");
+		htmlReporter.config().setCSS(".r-img { width: 50%; }");
 
 		return extent; // in the end returns constructed extent report
 	}

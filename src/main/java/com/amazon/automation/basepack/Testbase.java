@@ -70,8 +70,10 @@ public class Testbase {
 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
+		driver.manage().timeouts().pageLoadTimeout(Long.parseLong(config.getProperty("pageLoadTime")),
+				TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Long.parseLong(config.getProperty("implicitWait")), TimeUnit.SECONDS);
 
 	}
 

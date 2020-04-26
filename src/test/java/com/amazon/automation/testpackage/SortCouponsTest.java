@@ -30,7 +30,7 @@ public class SortCouponsTest extends Testbase {
 			driver.get(config.getProperty("baseURL"));
 			couponspage = new CouponsPage(driver);
 
-		} catch (IOException e) { // TODO Auto-generated catch block
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}

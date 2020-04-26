@@ -84,6 +84,11 @@ public class HomePage {
 
 		wait.until(ExpectedConditions.elementToBeClickable(elem)).click();
 
+		/*
+		 * converting set of window handles into array list of generic
+		 * type=String , so that indexing can be applied on Set values
+		 */
+
 		ArrayList<String> tab2 = new ArrayList<String>(driver.getWindowHandles());
 		if (tab2.size() > 1) {
 

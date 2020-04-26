@@ -6,6 +6,10 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ExtentManager {
 
+	/*
+	 * This method to be used in ExtentListeners class to create instance of
+	 * extent report.
+	 */
 	public static ExtentReports createReport(String fileName) {
 
 		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(fileName);
@@ -22,7 +26,7 @@ public class ExtentManager {
 		htmlReporter.config().setReportName("Test Report for Amazon Testing Framework designed by Anil");
 		htmlReporter.config().setCSS(".r-img { width: 50%; }");
 
-		return extent; // in the end returns constructed extent report
+		return extent;
 	}
 
 }

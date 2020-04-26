@@ -15,8 +15,6 @@ import com.amazon.automation.dataprovider.DataUtil;
 import com.amazon.automation.pages.CouponsPage;
 import com.aventstack.extentreports.Status;
 
-//coupons>shop by category>select category//
-
 public class SelectCouponsCategoryTest extends Testbase {
 
 	private CouponsPage couponspage;
@@ -32,7 +30,7 @@ public class SelectCouponsCategoryTest extends Testbase {
 			driver.get(config.getProperty("baseURL"));
 			couponspage = new CouponsPage(driver);
 
-		} catch (IOException e) { // TODO Auto-generated catch block
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}

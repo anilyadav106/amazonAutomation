@@ -35,12 +35,11 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 	public void onTestStart(ITestResult result) {
 		System.out.println(" Test started for : " + result.getMethod().getMethodName());
 
-		test = extent.createTest("TestCase : " + result.getMethod().getMethodName()); // to
-																						// create
-																						// a
-																						// test
-		testReport.set(test); // to add above test to extent report to be
-								// generated.
+		/* to create a test */
+		test = extent.createTest("TestCase : " + result.getMethod().getMethodName());
+
+		/* to add above test to extent report to be generated. */
+		testReport.set(test);
 
 	}
 
@@ -63,7 +62,9 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 				.fail("<details>" + "<summary>" + "<b>" + "<font color=" + "red>"
 						+ "Exception Occured: Click here to see" + "</font>" + "</b >" + "</summary>"
 						+ exceptionMessage.replaceAll(",", "<br>") + "</details>" + " \n");
-		/* to capture screen shot also for failure */
+		/*
+		 * to capture screen shot also for test failure and add to test report
+		 */
 		String path = CommonMethods.captureScreeshot();
 
 		try {
@@ -72,8 +73,8 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 
 			e.printStackTrace();
 		}
-		String failureLogg = "TEST CASE FAILED";
-		Markup m = MarkupHelper.createLabel(failureLogg, ExtentColor.RED);
+		String logText = "TEST CASE FAILED";
+		Markup m = MarkupHelper.createLabel(logText, ExtentColor.RED);
 
 		testReport.get().log(Status.FAIL, m);
 

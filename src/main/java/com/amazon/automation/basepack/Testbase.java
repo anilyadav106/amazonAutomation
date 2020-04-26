@@ -22,7 +22,7 @@ public class Testbase {
 	protected static Properties config = new Properties();
 	private FileInputStream fis;
 	protected static WebDriver driver;
-	protected static Logger log = Logger.getLogger(Testbase.class);
+	protected static Logger log = Logger.getLogger("devpinoyLogger");
 
 	/*
 	 * method to launch the browser basis the value provided from configuration
@@ -47,7 +47,7 @@ public class Testbase {
 			ChromeOptions options = new ChromeOptions();
 			options.setPageLoadStrategy(PageLoadStrategy.NONE);
 			options.addArguments("disable-infobars");
-			driver = new ChromeDriver(options); // add option to constructor
+			driver = new ChromeDriver(options);
 
 		} else if (config.getProperty("browser").contains("FF")) {
 			log.debug("Launching FF browser");
@@ -70,6 +70,8 @@ public class Testbase {
 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
+
+		/* to get page load time ad implicit wait values from config file */
 
 		driver.manage().timeouts().pageLoadTimeout(Long.parseLong(config.getProperty("pageLoadTime")),
 				TimeUnit.SECONDS);

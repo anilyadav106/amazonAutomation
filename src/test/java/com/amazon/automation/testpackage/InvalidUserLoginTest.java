@@ -27,7 +27,7 @@ public class InvalidUserLoginTest extends Testbase {
 			driver.get(config.getProperty("baseURL"));
 			login = new LoginPage(driver);
 
-		} catch (IOException e) { // TODO Auto-generated catch block
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}

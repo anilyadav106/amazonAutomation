@@ -16,15 +16,10 @@ public class DataUtil extends Testbase {
 	public static Object[][] getData(Method m) {
 
 		int rows = excel.getRowCount(config.getProperty("testDataSheetName"));
-		// System.out.println("Total rows are : " + rows);
 
 		String testName = m.getName();
 
-		// String testName = "AddCustomerTestInValid";
-
 		System.out.println("Test name is : " + testName);
-
-		// Find the test case start row
 
 		int testCaseRowNum = 1;
 
@@ -37,11 +32,6 @@ public class DataUtil extends Testbase {
 
 		}
 
-		// System.out.println("Test case starts from row num: " +
-		// testCaseRowNum);
-
-		// Checking total rows in test case
-
 		int dataStartRowNum = testCaseRowNum + 2;
 
 		int testRows = 0;
@@ -49,10 +39,6 @@ public class DataUtil extends Testbase {
 
 			testRows++;
 		}
-
-		// System.out.println("Total rows of data are : " + testRows);
-
-		// Checking total cols in test case
 
 		int colStartColNum = testCaseRowNum + 1;
 		int testCols = 0;
@@ -63,10 +49,6 @@ public class DataUtil extends Testbase {
 
 		}
 
-		// System.out.println("Total cols of data are : " + testCols);
-
-		// Printing data
-
 		Object[][] data = new Object[testRows][1];
 
 		int i = 0;
@@ -76,8 +58,6 @@ public class DataUtil extends Testbase {
 
 			for (int cNum = 0; cNum < testCols; cNum++) {
 
-				// System.out.println(excel.getCellData(config.getProperty("testDataSheetName"),
-				// cNum, rNum));
 				String testData = excel.getCellData(config.getProperty("testDataSheetName"), cNum, rNum);
 				String colName = excel.getCellData(config.getProperty("testDataSheetName"), cNum, colStartColNum);
 

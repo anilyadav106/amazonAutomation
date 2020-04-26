@@ -31,7 +31,7 @@ public class AddToCartTest extends Testbase {
 			driver.get(config.getProperty("baseURL"));
 			home = new HomePage(driver);
 
-		} catch (IOException e) { // TODO Auto-generated catch block
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}

@@ -1,7 +1,11 @@
 package com.amazon.automation.customlisterns;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
@@ -18,9 +22,10 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.tesults.tesults.Results;
 
 public class ExtentListeners implements ITestListener, ISuiteListener {
-
+	List<Map<String, Object>> testCases = new ArrayList<Map<String, Object>>();
 	static Date d = new Date();
 	// static String fileName = "Extent_" + d.toString().replace(":",
 	// "_").replace(" ", "_") + ".html";
@@ -50,6 +55,11 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 		Markup m = MarkupHelper.createLabel(logText, ExtentColor.GREEN);
 
 		testReport.get().pass(m);
+		/* to add in tseults report */
+		Map<String, Object> passTestCase = new HashMap<String, Object>();
+		passTestCase.put("name", result.getMethod().getMethodName());
+		passTestCase.put("result", "pass");
+		testCases.add(passTestCase);
 
 	}
 
@@ -77,6 +87,17 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 		Markup m = MarkupHelper.createLabel(logText, ExtentColor.RED);
 
 		testReport.get().log(Status.FAIL, m);
+		/* to add in tseults report */
+		Map<String, Object> failTestCase = new HashMap<String, Object>();
+		failTestCase.put("name", result.getMethod().getMethodName());
+		failTestCase.put("result", "fail");
+
+		List<String> files = new ArrayList<String>();
+		files.add(path); // add screen shot file path
+
+		failTestCase.put("files", files);
+
+		testCases.add(failTestCase);
 
 	}
 
@@ -87,11 +108,30 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 		String logText = "<b>" + "Test Case:- " + methodName + " Skipped" + "</b>";
 		Markup m = MarkupHelper.createLabel(logText, ExtentColor.YELLOW);
 		testReport.get().skip(m);
+		/* to add in tseults report */
+		Map<String, Object> skipTestCase = new HashMap<String, Object>();
+		skipTestCase.put("name", result.getMethod().getMethodName());
+		skipTestCase.put("result", "unknown");
+		testCases.add(skipTestCase);
 
 	}
 
 	public void onFinish(ITestContext context) {
+		/* to add in tseults report */
+		Map<String, Object> data = new HashMap<String, Object>();
+		data.put("target",
+				"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImI0NjYyNjM4LWVlZTktNGRmNy05NDhlLTdjZGI3YWJmZDZhNi0xNTg4MjYzMDYxNzIxIiwiZXhwIjo0MTAyNDQ0ODAwMDAwLCJ2ZXIiOiIwIiwic2VzIjoiYmM3OTJkOTYtNDNjZS00YjlhLWJiMmMtMzA4MmNlYTg0YzhjIiwidHlwZSI6InQifQ.JsM4Or53j0gWuMQRda-fXgi7AnUUcOPNPLnpM3KrqVE");
 
+		Map<String, Object> results = new HashMap<String, Object>();
+		results.put("cases", testCases);
+		data.put("results", results);
+
+		Map<String, Object> response = Results.upload(data);
+		System.out.println("success: " + response.get("success"));
+		System.out.println("message: " + response.get("message"));
+		System.out.println("warnings: " + ((List<String>) response.get("warnings")).size());
+		System.out.println("errors: " + ((List<String>) response.get("errors")).size());
+		/* to flush the extent report */
 		if (extent != null) {
 
 			extent.flush();

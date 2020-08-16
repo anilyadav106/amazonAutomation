@@ -56,6 +56,7 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 
 		testReport.get().pass(m);
 		/* to add in tseults report */
+
 		Map<String, Object> passTestCase = new HashMap<String, Object>();
 		passTestCase.put("name", result.getMethod().getMethodName());
 		passTestCase.put("result", "pass");
@@ -75,7 +76,7 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 		/*
 		 * to capture screen shot also for test failure and add to test report
 		 */
-		String path = CommonMethods.captureScreeshot();
+		String path = CommonMethods.captureScreeshot(result.getMethod().getMethodName());
 
 		try {
 			test.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(path).build());
@@ -88,6 +89,7 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 
 		testReport.get().log(Status.FAIL, m);
 		/* to add in tseults report */
+
 		Map<String, Object> failTestCase = new HashMap<String, Object>();
 		failTestCase.put("name", result.getMethod().getMethodName());
 		failTestCase.put("result", "fail");
@@ -109,6 +111,7 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 		Markup m = MarkupHelper.createLabel(logText, ExtentColor.YELLOW);
 		testReport.get().skip(m);
 		/* to add in tseults report */
+
 		Map<String, Object> skipTestCase = new HashMap<String, Object>();
 		skipTestCase.put("name", result.getMethod().getMethodName());
 		skipTestCase.put("result", "unknown");
@@ -118,9 +121,10 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 
 	public void onFinish(ITestContext context) {
 		/* to add in tseults report */
+
 		Map<String, Object> data = new HashMap<String, Object>();
 		data.put("target",
-				"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImI0NjYyNjM4LWVlZTktNGRmNy05NDhlLTdjZGI3YWJmZDZhNi0xNTg4MjYzMDYxNzIxIiwiZXhwIjo0MTAyNDQ0ODAwMDAwLCJ2ZXIiOiIwIiwic2VzIjoiYmM3OTJkOTYtNDNjZS00YjlhLWJiMmMtMzA4MmNlYTg0YzhjIiwidHlwZSI6InQifQ.JsM4Or53j0gWuMQRda-fXgi7AnUUcOPNPLnpM3KrqVE");
+				"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImI0NjYyNjM4LWVlZTktNGRmNy05NDhlLTdjZGI3YWJmZDZhNi0xNTg4MjYzMDYxNzIxIiwiZXhwIjo0MTAyNDQ0ODAwMDAwLCJ2ZXIiOiIwIiwic2VzIjoiZDM5OWQwOWItOTNhMS00NWRlLTgzMWMtMzdkNDk0NGQ5YWMzIiwidHlwZSI6InQifQ.wBz2yKeQXIHReSY7s9v7Ujw4M9gt6FhqdPRdoAq9MX0");
 
 		Map<String, Object> results = new HashMap<String, Object>();
 		results.put("cases", testCases);
@@ -131,6 +135,7 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 		System.out.println("message: " + response.get("message"));
 		System.out.println("warnings: " + ((List<String>) response.get("warnings")).size());
 		System.out.println("errors: " + ((List<String>) response.get("errors")).size());
+
 		/* to flush the extent report */
 		if (extent != null) {
 

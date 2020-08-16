@@ -12,15 +12,15 @@ import org.testng.annotations.Test;
 import com.amazon.automation.basepack.Testbase;
 import com.amazon.automation.customlisterns.ExtentListeners;
 import com.amazon.automation.dataprovider.DataUtil;
-import com.amazon.automation.pages.CouponsPage;
+import com.amazon.automation.pages.DealsPage;
 import com.aventstack.extentreports.Status;
 
-public class SortCouponsTest extends Testbase {
+public class SelectDealsByRatingTest extends Testbase {
 
-	private CouponsPage couponspage;
+	private DealsPage dealsPage;
 
 	/*
-	 * method to initialize page objects in test class / /
+	 * // method to initialize page objects in test class//
 	 */
 	@BeforeTest
 	public void testSetup() {
@@ -28,7 +28,7 @@ public class SortCouponsTest extends Testbase {
 		try {
 			launchBrowser();
 			driver.get(config.getProperty("baseURL"));
-			couponspage = new CouponsPage(driver);
+			dealsPage = new DealsPage(driver);
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -43,24 +43,22 @@ public class SortCouponsTest extends Testbase {
 	}
 
 	@Test(dataProviderClass = DataUtil.class, dataProvider = "data", groups = { "sanity" })
-	public void couponSortTest(Hashtable<String, String> data) {
-
+	public void dealsCategoryTest(Hashtable<String, String> data) {
 		String runMode = data.get("Runmode");
 
 		if (runMode.equalsIgnoreCase("N")) {
 			throw new SkipException("Skipping the test as runMode equals N");
 
 		} else {
-			log.debug("Coupon sort test started ");
-			ExtentListeners.test.log(Status.INFO, "Coupon sort test started for :" + data.get("sortText"));
-			String sortText = data.get("sortText");
-
-			couponspage.couponsSort(sortText);
-
-			Assert.assertTrue(couponspage.isAllCouponsTextDisplayed(),
-					"All coupons text is not displayed , means user is not on copouns sort page.");
-			ExtentListeners.test.log(Status.INFO, "Coupon sorted successfully");
-			log.debug("Coupon sorted successfully ");
+			log.debug("Selecting dealsCategory ");
+			ExtentListeners.test.log(Status.INFO, "Selecting dealsCategory for : " + data.get("dealsCategory"));
+			dealsPage.selectDealsByRating(data.get("dealsCategory"));
+			ExtentListeners.test.log(Status.INFO, "  dealsCategory  has been searched ");
+			Assert.assertTrue(dealsPage.dealsCategorySearchText(data.get("dealsCategory")),
+					"dealsCategory is not displayed");
+			ExtentListeners.test.log(Status.INFO, "dealsCategory results are displayed ");
+			log.debug("Required dealsCategory is found ");
 		}
+
 	}
 }

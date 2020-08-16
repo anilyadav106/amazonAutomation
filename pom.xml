@@ -11,7 +11,7 @@
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
-			<version>3.6.2</version>
+			<version>4.0.0</version>
 		</dependency>
 
 		<dependency>
@@ -33,14 +33,24 @@
 			<version>4.1.2</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/xml-apis/xml-apis -->
-		<dependency>
-			<groupId>xml-apis</groupId>
-			<artifactId>xml-apis</artifactId>
-			<version>1.0.b2</version>
-		</dependency>
-
-
+		 <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.13.3</version>
+</dependency>
+		 
+		 
+		 <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>2.13.3</version>
+</dependency>
+		 
+		
+ 
+  
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -54,9 +64,8 @@
 			<version>2.4</version>
 		</dependency>
 
-
-
-
+ 
+ 
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -64,16 +73,8 @@
 			<version>4.1.2</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>1.7.5</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.7.5</version>
-		</dependency>
+		 
+
 
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 
@@ -86,14 +87,18 @@
 		</dependency>
 	</dependencies>
 
-	<build>
+	<build>	
+	<resources>
+	<resource>
+	<directory>src/test/resources </directory>
+	<filtering>true</filtering>
+	</resource>
+	</resources>
 		<plugins>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.0</version>
-
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

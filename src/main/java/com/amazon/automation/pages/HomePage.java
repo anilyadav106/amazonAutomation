@@ -3,6 +3,7 @@ package com.amazon.automation.pages;
 import java.util.ArrayList;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -58,7 +59,7 @@ public class HomePage {
 
 		CommonMethods.selectElementFromDropDownSelect(categorySelectButton, category);
 
-		wait.until(ExpectedConditions.elementToBeClickable(searchGoButton)).click();
+		searchGoButton.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(smartWatchesButton));
 
@@ -70,19 +71,24 @@ public class HomePage {
 	 * String searchText is the product to search.
 	 */
 	public void addtoCartAProduct(String searchText) {
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
 
 		CommonMethods.searchInputBox(searchBar, searchText);
 
-		wait.until(ExpectedConditions.elementToBeClickable(searchGoButton)).click();
+		searchGoButton.click();
 
 		String parentHandel = driver.getWindowHandle();
-		System.out.println("First window handle is " + parentHandel);
 
-		WebElement elem = driver.findElement(
-				By.xpath("//div[@class='a-section a-spacing-none']//span[contains(text(),'" + searchText + "')]"));
+		// WebElement elem = driver.findElement(By.xpath("//img[@alt='" +
+		// searchText + "']"));
 
-		wait.until(ExpectedConditions.elementToBeClickable(elem)).click();
+		try {
+
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='" + searchText + "']"))).click();
+		} catch (StaleElementReferenceException e) {
+			driver.findElement(By.xpath("//img[@alt='" + searchText + "']"));
+			e.printStackTrace();
+		}
 
 		/*
 		 * converting set of window handles into array list of generic

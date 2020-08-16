@@ -30,12 +30,13 @@ public class CommonMethods extends Testbase {
 	public static void selectElementFromDropDownNonSelect(WebElement elem, String ddvalue) {
 		Actions act = new Actions(driver);
 		try {
-			act.moveToElement(elem).click().perform();
+			act.moveToElement(elem).click().build().perform();
 		}
 
 		catch (NoSuchElementException e) {
 			System.out.println("No such element found :" + e.getMessage());
 			e.printStackTrace();
+
 		} catch (ElementNotVisibleException e) {
 			System.out.println("Element not visible :" + e.getMessage());
 			e.printStackTrace();
@@ -111,12 +112,13 @@ public class CommonMethods extends Testbase {
 	 * case. Failure of TC is decided from listener class' onTestFailure method
 	 */
 
-	public static String captureScreeshot() {
-		log.debug("Launching the capture screen shot");
+	public static String captureScreeshot(String testMethodName) {
+		// log.debug("Launching the capture screen shot");
 		File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		Date d = new Date();
-		String fileName = d.toString().replace(":", "_").replace(" ", "_");
-		String path = System.getProperty("user.dir") + "/FailedTestCasesScreenshots/" + fileName + ".png";
+		String fileName = d.toString().replace(":", "-").replace(" ", "-");
+		String path = System.getProperty("user.dir") + "/FailedTestCasesScreenshots/" + fileName + " " + testMethodName
+				+ ".png";
 		File destination = new File(path);
 
 		try {

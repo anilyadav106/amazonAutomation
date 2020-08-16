@@ -1,0 +1,21 @@
+22:10:58.360 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+22:10:58.365 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+22:11:06.784 [main] DEBUG com.amazon.automation.basepack.Testbase - Entering valid UID and PWD
+22:11:57.508 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+22:11:57.508 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+22:12:03.308 [main] DEBUG com.amazon.automation.basepack.Testbase - Entering invalid UID and PWD
+22:12:39.373 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+22:12:39.374 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+22:12:50.755 [main] DEBUG com.amazon.automation.basepack.Testbase - Selecting dealsCategory 
+22:14:08.123 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+22:14:08.123 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+22:14:14.010 [main] DEBUG com.amazon.automation.basepack.Testbase - Product search category started 
+22:15:46.581 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+22:15:46.581 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+22:15:51.320 [main] DEBUG com.amazon.automation.basepack.Testbase - Adding the product to cart
+22:16:25.924 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+22:16:25.924 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+22:16:31.560 [main] DEBUG com.amazon.automation.basepack.Testbase - Adding the product to cart
+22:20:41.458 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+22:20:41.466 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+22:20:53.086 [main] DEBUG com.amazon.automation.basepack.Testbase - Entering valid UID and PWD

@@ -59,7 +59,7 @@ public class LoginPage {
 	private WebElement logOutButton1;
 
 	public void amazonLogin(String uid, String pwd) {
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, 10);
 
 		wait.until(ExpectedConditions.elementToBeClickable(loginButton)).click();
 

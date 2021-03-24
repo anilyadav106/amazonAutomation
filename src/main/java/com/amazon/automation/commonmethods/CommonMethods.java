@@ -24,8 +24,8 @@ public class CommonMethods extends Testbase {
 	private static WebDriverWait wait = new WebDriverWait(driver, 30);
 
 	/*
-	 * method to select element from a dropdown having non-select class it
-	 * accepts drodown element and order of the element in the dropdown
+	 * method to select element from a dropdown having non-select class ,it
+	 * accepts dropdown element and order of the element in the dropdown
 	 */
 	public static void selectElementFromDropDownNonSelect(WebElement elem, String ddvalue) {
 		Actions act = new Actions(driver);
@@ -51,8 +51,8 @@ public class CommonMethods extends Testbase {
 	}
 
 	/*
-	 * method to select element from a dropdown having select class it accepts
-	 * drodown element and text of the element in the dropdow
+	 * method to select element from a dropdown having select class it ,accepts
+	 * dropdown element and text of the element in the dropdown
 	 */
 	public static void selectElementFromDropDownSelect(WebElement elem, String elementText) {
 
@@ -84,6 +84,11 @@ public class CommonMethods extends Testbase {
 			e.printStackTrace();
 		}
 	}
+	
+	/*
+	 * Method to enter a value in the input box
+	 * 
+	 * */
 
 	public static void searchInputBox(WebElement elem, String searchText) {
 

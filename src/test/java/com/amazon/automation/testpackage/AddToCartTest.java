@@ -53,7 +53,9 @@ public class AddToCartTest extends Testbase {
 		} else {
 			log.debug("Adding the product to cart");
 			ExtentListeners.test.log(Status.INFO, "Add to product test started for :" + data.get("productName"));
-
+			
+// call method from page class and pass the productname from the data provider
+			
 			home.addtoCartAProduct(data.get("productName"));
 
 			Assert.assertTrue(home.getAddedToCartSuccessMessage().isDisplayed(),

@@ -1,0 +1,20 @@
+15:09:36.593 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+15:09:36.600 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+15:09:44.409 [main] DEBUG com.amazon.automation.basepack.Testbase - Entering valid UID and PWD
+15:09:52.946 [main] DEBUG com.amazon.automation.basepack.Testbase - Skipping the test as Amazon has deducted auto login from selenuim so skipping the test
+15:10:00.550 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+15:10:00.550 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+15:10:02.938 [main] DEBUG com.amazon.automation.basepack.Testbase - Entering invalid UID and PWD
+15:10:17.067 [main] DEBUG com.amazon.automation.basepack.Testbase - Skipping the test because mazon has deducted auto login from selenuim so skipping the test
+15:10:24.551 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+15:10:24.551 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+15:10:26.823 [main] DEBUG com.amazon.automation.basepack.Testbase - Selecting dealsCategory 
+15:11:49.643 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+15:11:49.644 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+15:11:52.139 [main] DEBUG com.amazon.automation.basepack.Testbase - Product search category started 
+15:12:55.375 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+15:12:55.375 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+15:12:58.772 [main] DEBUG com.amazon.automation.basepack.Testbase - Adding the product to cart
+15:13:21.311 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+15:13:21.311 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+15:13:23.535 [main] DEBUG com.amazon.automation.basepack.Testbase - Adding the product to cart

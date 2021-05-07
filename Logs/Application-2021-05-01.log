@@ -1,0 +1,131 @@
+15:54:35.424 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+15:54:35.431 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+15:54:52.271 [main] DEBUG com.amazon.automation.basepack.Testbase - Entering valid UID and PWD
+15:55:00.915 [main] DEBUG com.amazon.automation.basepack.Testbase - Skipping the test as Amazon has deducted auto login from selenuim so skipping the test
+15:55:07.509 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+15:55:07.509 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+15:55:09.512 [main] DEBUG com.amazon.automation.basepack.Testbase - Entering invalid UID and PWD
+15:55:19.466 [main] DEBUG com.amazon.automation.basepack.Testbase - Skipping the test because mazon has deducted auto login from selenuim so skipping the test
+15:55:25.619 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+15:55:25.619 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+15:55:28.113 [main] DEBUG com.amazon.automation.basepack.Testbase - Selecting dealsCategory 
+15:56:11.000 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+15:56:11.000 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+15:56:13.333 [main] DEBUG com.amazon.automation.basepack.Testbase - Product search category started 
+15:56:57.793 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+15:56:57.793 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+15:56:59.828 [main] DEBUG com.amazon.automation.basepack.Testbase - Adding the product to cart
+15:57:20.564 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+15:57:20.564 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+15:57:22.278 [main] DEBUG com.amazon.automation.basepack.Testbase - Adding the product to cart
+21:24:26.820 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:24:26.825 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:24:59.395 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:24:59.401 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:25:08.818 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:25:08.818 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:25:12.195 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:25:12.195 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:25:15.764 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:25:15.764 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:25:18.937 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:25:18.937 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:27:55.077 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:27:55.084 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:28:04.260 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:28:04.260 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:28:06.578 [main] DEBUG com.amazon.automation.basepack.Testbase - Entering invalid UID and PWD
+21:28:16.823 [main] DEBUG com.amazon.automation.basepack.Testbase - Skipping the test because mazon has deducted auto login from selenuim so skipping the test
+21:28:21.400 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:28:21.400 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:28:23.183 [main] DEBUG com.amazon.automation.basepack.Testbase - Selecting dealsCategory 
+21:29:04.477 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:29:04.477 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:29:06.897 [main] DEBUG com.amazon.automation.basepack.Testbase - Product search category started 
+21:29:37.833 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:29:37.833 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:29:40.043 [main] DEBUG com.amazon.automation.basepack.Testbase - Adding the product to cart
+21:30:06.572 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:30:06.573 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:30:08.315 [main] DEBUG com.amazon.automation.basepack.Testbase - Adding the product to cart
+21:32:11.938 [TestNG-tests-4] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:32:11.938 [TestNG-tests-1] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:32:11.938 [TestNG-tests-3] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:32:11.944 [TestNG-tests-4] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:32:11.944 [TestNG-tests-1] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:32:11.944 [TestNG-tests-3] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:32:12.986 [TestNG-tests-5] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:32:12.987 [TestNG-tests-5] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:32:12.996 [TestNG-tests-2] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:32:12.996 [TestNG-tests-2] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:32:19.082 [TestNG-tests-2] DEBUG com.amazon.automation.basepack.Testbase - Entering invalid UID and PWD
+21:32:20.320 [TestNG-tests-4] DEBUG com.amazon.automation.basepack.Testbase - Product search category started 
+21:32:23.621 [TestNG-tests-5] DEBUG com.amazon.automation.basepack.Testbase - Adding the product to cart
+21:32:23.727 [TestNG-tests-3] DEBUG com.amazon.automation.basepack.Testbase - Selecting dealsCategory 
+21:32:31.516 [TestNG-tests-2] DEBUG com.amazon.automation.basepack.Testbase - Skipping the test because mazon has deducted auto login from selenuim so skipping the test
+21:35:13.751 [TestNG-tests-3] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:35:13.753 [TestNG-tests-1] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:35:13.753 [TestNG-tests-4] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:35:13.768 [TestNG-tests-4] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:35:13.768 [TestNG-tests-1] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:35:13.768 [TestNG-tests-3] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:35:15.658 [TestNG-tests-5] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:35:15.658 [TestNG-tests-5] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:35:15.658 [TestNG-tests-2] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:35:15.659 [TestNG-tests-2] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:35:25.980 [TestNG-tests-2] DEBUG com.amazon.automation.basepack.Testbase - Entering invalid UID and PWD
+21:35:26.085 [TestNG-tests-4] DEBUG com.amazon.automation.basepack.Testbase - Product search category started 
+21:35:26.191 [TestNG-tests-3] DEBUG com.amazon.automation.basepack.Testbase - Selecting dealsCategory 
+21:35:26.255 [TestNG-tests-5] DEBUG com.amazon.automation.basepack.Testbase - Adding the product to cart
+21:37:35.907 [TestNG-tests-1] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:37:35.907 [TestNG-tests-3] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:37:35.907 [TestNG-tests-4] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:37:35.913 [TestNG-tests-4] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:37:35.913 [TestNG-tests-1] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:37:35.914 [TestNG-tests-3] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:37:38.381 [TestNG-tests-2] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:37:38.382 [TestNG-tests-2] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:37:46.939 [TestNG-tests-3] DEBUG com.amazon.automation.basepack.Testbase - Selecting dealsCategory 
+21:37:47.079 [TestNG-tests-4] DEBUG com.amazon.automation.basepack.Testbase - Product search category started 
+21:37:47.167 [TestNG-tests-2] DEBUG com.amazon.automation.basepack.Testbase - Entering invalid UID and PWD
+21:38:59.115 [TestNG-tests-4] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:38:59.115 [TestNG-tests-3] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:38:59.116 [TestNG-tests-1] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:38:59.124 [TestNG-tests-3] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:38:59.124 [TestNG-tests-4] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:38:59.124 [TestNG-tests-1] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:39:00.721 [TestNG-tests-2] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:39:00.721 [TestNG-tests-2] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:39:00.742 [TestNG-tests-5] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:39:00.742 [TestNG-tests-5] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:39:12.917 [TestNG-tests-4] DEBUG com.amazon.automation.basepack.Testbase - Product search category started 
+21:39:13.043 [TestNG-tests-5] DEBUG com.amazon.automation.basepack.Testbase - Adding the product to cart
+21:39:13.186 [TestNG-tests-3] DEBUG com.amazon.automation.basepack.Testbase - Selecting dealsCategory 
+21:39:19.009 [TestNG-tests-2] DEBUG com.amazon.automation.basepack.Testbase - Entering invalid UID and PWD
+21:42:20.729 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:42:20.735 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:42:30.565 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:42:30.565 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:42:33.044 [main] DEBUG com.amazon.automation.basepack.Testbase - Entering invalid UID and PWD
+21:42:50.405 [main] DEBUG com.amazon.automation.basepack.Testbase - Skipping the test because mazon has deducted auto login from selenuim so skipping the test
+21:43:01.638 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:43:01.638 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:43:04.128 [main] DEBUG com.amazon.automation.basepack.Testbase - Selecting dealsCategory 
+21:44:03.841 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:44:03.841 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:44:05.808 [main] DEBUG com.amazon.automation.basepack.Testbase - Product search category started 
+21:44:33.169 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:44:33.180 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:44:42.433 [main] DEBUG com.amazon.automation.basepack.Testbase - Entering valid UID and PWD
+21:45:49.064 [TestNG-tests-1] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:45:49.064 [TestNG-tests-4] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:45:49.064 [TestNG-tests-3] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:45:49.072 [TestNG-tests-1] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:45:49.072 [TestNG-tests-4] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:45:49.072 [TestNG-tests-3] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:45:50.585 [TestNG-tests-2] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+21:45:50.585 [TestNG-tests-2] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+21:45:59.286 [TestNG-tests-2] DEBUG com.amazon.automation.basepack.Testbase - Entering invalid UID and PWD
+21:45:59.364 [TestNG-tests-3] DEBUG com.amazon.automation.basepack.Testbase - Selecting dealsCategory 
+21:45:59.442 [TestNG-tests-4] DEBUG com.amazon.automation.basepack.Testbase - Product search category started 
+21:46:05.546 [TestNG-tests-1] DEBUG com.amazon.automation.basepack.Testbase - Entering valid UID and PWD

@@ -33,7 +33,7 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 
 	public static ExtentReports extent = ExtentManager
 			.createReport(System.getProperty("user.dir") + "\\reports\\" + fileName);
-
+/*To make our report thread safes*/
 	public static ThreadLocal<ExtentTest> testReport = new ThreadLocal<ExtentTest>();
 	public static ExtentTest test;
 
@@ -43,7 +43,7 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 		/* to create a test */
 		test = extent.createTest("TestCase : " + result.getMethod().getMethodName());
 
-		/* to add above test to extent report to be generated. */
+		/* to add above test objects to threadlocal, so that correct test object is assigned in case of parallel executions. */
 		testReport.set(test);
 
 	}

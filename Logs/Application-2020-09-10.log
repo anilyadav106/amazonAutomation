@@ -1,0 +1,21 @@
+15:51:11.612 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+15:51:11.616 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+15:51:29.583 [main] DEBUG com.amazon.automation.basepack.Testbase - Entering valid UID and PWD
+15:51:37.668 [main] DEBUG com.amazon.automation.basepack.Testbase - Skipping the test as Amazon has deducted auto login from selenuim so skipping the test
+15:51:41.895 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+15:51:41.896 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+15:51:47.384 [main] DEBUG com.amazon.automation.basepack.Testbase - Entering invalid UID and PWD
+15:51:56.240 [main] DEBUG com.amazon.automation.basepack.Testbase - Skipping the test because mazon has deducted auto login from selenuim so skipping the test
+15:51:59.652 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+15:51:59.652 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+15:52:05.323 [main] DEBUG com.amazon.automation.basepack.Testbase - Selecting dealsCategory 
+15:52:13.203 [main] DEBUG com.amazon.automation.basepack.Testbase - Required dealsCategory is found 
+15:52:16.857 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+15:52:16.857 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+15:52:22.441 [main] DEBUG com.amazon.automation.basepack.Testbase - Product search category started 
+15:53:44.801 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+15:53:44.801 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+15:53:50.262 [main] DEBUG com.amazon.automation.basepack.Testbase - Adding the product to cart
+15:54:00.194 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+15:54:00.194 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+15:54:05.560 [main] DEBUG com.amazon.automation.basepack.Testbase - Adding the product to cart

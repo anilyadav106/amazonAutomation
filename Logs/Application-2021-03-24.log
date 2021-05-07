@@ -1,0 +1,41 @@
+18:16:34.930 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+18:16:34.933 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+18:16:42.653 [main] DEBUG com.amazon.automation.basepack.Testbase - Entering valid UID and PWD
+18:17:09.553 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+18:17:09.553 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+18:17:11.193 [main] DEBUG com.amazon.automation.basepack.Testbase - Entering invalid UID and PWD
+18:17:20.056 [main] DEBUG com.amazon.automation.basepack.Testbase - Skipping the test because mazon has deducted auto login from selenuim so skipping the test
+18:17:25.210 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+18:17:25.210 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+18:17:26.832 [main] DEBUG com.amazon.automation.basepack.Testbase - Selecting dealsCategory 
+18:17:35.657 [main] DEBUG com.amazon.automation.basepack.Testbase - Required dealsCategory is found 
+18:17:41.706 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+18:17:41.706 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+18:17:43.879 [main] DEBUG com.amazon.automation.basepack.Testbase - Product search category started 
+18:18:09.973 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+18:18:09.974 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+18:18:11.482 [main] DEBUG com.amazon.automation.basepack.Testbase - Adding the product to cart
+18:18:33.570 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+18:18:33.570 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+18:18:35.090 [main] DEBUG com.amazon.automation.basepack.Testbase - Adding the product to cart
+18:46:46.511 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+18:46:46.516 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+18:46:50.568 [main] DEBUG com.amazon.automation.basepack.Testbase - Entering valid UID and PWD
+18:46:58.544 [main] DEBUG com.amazon.automation.basepack.Testbase - Skipping the test as Amazon has deducted auto login from selenuim so skipping the test
+18:47:02.919 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+18:47:02.919 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+18:47:04.874 [main] DEBUG com.amazon.automation.basepack.Testbase - Entering invalid UID and PWD
+18:47:11.551 [main] DEBUG com.amazon.automation.basepack.Testbase - Skipping the test because mazon has deducted auto login from selenuim so skipping the test
+18:47:14.705 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+18:47:14.705 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+18:47:16.651 [main] DEBUG com.amazon.automation.basepack.Testbase - Selecting dealsCategory 
+18:47:22.549 [main] DEBUG com.amazon.automation.basepack.Testbase - Required dealsCategory is found 
+18:47:26.166 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+18:47:26.167 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+18:47:27.693 [main] DEBUG com.amazon.automation.basepack.Testbase - Product search category started 
+18:47:55.506 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+18:47:55.506 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+18:47:57.026 [main] DEBUG com.amazon.automation.basepack.Testbase - Adding the product to cart
+18:48:16.996 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching the desired browser
+18:48:16.996 [main] DEBUG com.amazon.automation.basepack.Testbase - Launching chrome browser
+18:48:18.533 [main] DEBUG com.amazon.automation.basepack.Testbase - Adding the product to cart

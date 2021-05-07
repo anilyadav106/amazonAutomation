@@ -31,7 +31,7 @@ public class Testbase {
 	 * file
 	 */
 
-	public void launchBrowser() throws IOException {
+	public WebDriver launchBrowser() throws IOException {
 
 		try {
 			fis = new FileInputStream(".\\src\\test\\resources\\properties\\config.properties");
@@ -78,7 +78,7 @@ public class Testbase {
 		driver.manage().timeouts().pageLoadTimeout(Long.parseLong(config.getProperty("pageLoadTime")),
 				TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(Long.parseLong(config.getProperty("implicitWait")), TimeUnit.SECONDS);
-
+return driver;
 	}
 
 }

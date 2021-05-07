@@ -3,6 +3,7 @@ package com.amazon.automation.testpackage;
 import java.io.IOException;
 import java.util.Hashtable;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
@@ -18,6 +19,7 @@ import com.aventstack.extentreports.Status;
 public class AddToCartTest extends Testbase {
 
 	private HomePage home;
+	private WebDriver driver;
 
 	/*
 	 * / This is method to initialize page objects in test class/
@@ -27,7 +29,7 @@ public class AddToCartTest extends Testbase {
 	public void testSetup() {
 
 		try {
-			launchBrowser();
+		driver=	launchBrowser();
 			driver.get(config.getProperty("baseURL"));
 			home = new HomePage(driver);
 

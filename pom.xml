@@ -88,7 +88,9 @@
 	</dependencies>
 
 	<build>	
+
 	<resources>
+		<!-- Below resource is to check where is log4j file located -->
 	<resource>
 	<directory>src/test/resources </directory>
 	<filtering>true</filtering>
